@@ -1,0 +1,123 @@
+---
+title: "Memory Card Game"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+  <header>
+    <h1>Memory Card Game</h1>
+  </header>
+
+  {/* Narrativa (projeto autoral) */}
+  <section>
+    ## Da curiosidade a um PWA completo de jogo da memória
+
+    ### Ato 1 — O problema certo para treinar
+    Eu buscava um exercício que elevasse raciocínio lógico sem depender de backends complexos. O jogo da memória parecia simples demais — até decidir que ele seria um laboratório de UX, acessibilidade e PWA.
+
+    <Callout type="warning" title="Hipótese">
+      Se o jogo fosse rápido, acessível e com progressão clara (conquistas/modos), a experiência deixaria de ser casual e passaria a ser envolvente.
+    </Callout>
+
+    ### Ato 2 — O insight de design
+    Transformei “virar cartas” em micro‑decisões: ritmo, tempo de revelação, feedback auditivo/visual e curva de dificuldade. O objetivo era manter fluxo e evitar frustração cognitiva.
+
+    ### Ato 3 — Construção
+    - **Arquitetura:** React + TypeScript, build com Vite e PWA completo (install + offline).
+    - **Game Loop:** temporizações precisas, persistência de progresso e 4 modos de jogo.
+    - **Acessibilidade:** suporte total a teclado e leitores de tela, foco gerenciado e ARIA.
+    - **Feedback:** animações e sons sincronizados a cada evento crítico.
+
+    ### Ato 4 — Impacto esperado
+    - Sessões mais longas por conta das conquistas e variação de modos.
+    - Menos “rage quit” graças a sinais claros de acerto/erro e ritmo consistente.
+    - Rejogabilidade alta em ambientes offline (PWA) — ideal para dispositivos móveis.
+
+    <Callout type="success" title="Resultado prático">
+      Segundo jogo web do meu portfólio, consolidando boas práticas de UX acessível e engenharia de front‑end aplicada a jogos.
+    </Callout>
+
+    ### Ato 5 — O que ficou
+    Além da diversão, ficou um arcabouço reaproveitável para prototipar jogos web nativos com foco em progressão, performance e acessibilidade.
+  </section>
+
+  <section className="mt-6">
+    ## Modos de Jogo e Conquistas
+
+    - **Clássico:** pares embaralhados, tempo padrão.
+    - **Contra o Tempo:** cronômetro regressivo, bônus por combos rápidos.
+    - **Zen:** foco no fluxo e na precisão, sem pressão de tempo.
+    - **Duelo Local:** dois jogadores no mesmo dispositivo.
+    - **Conquistas (exemplos):** “Sem Erros”, “Velocista”, “Mestre da Sequência” e “Maratona Offline (PWA)”.
+  </section>
+
+  {/* Demo interativa */}
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">Demo interativa</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[600px] rounded-lg overflow-hidden border shadow-sm">
+      <div className="absolute inset-0 w-full h-full">
+        <div className="w-[140%] h-[140%] origin-top-left scale-[0.7]">
+          <iframe
+            src="https://memory-card-game-antonio-s.vercel.app/"
+            className="w-full h-full"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  {/* Marquee de tecnologias (com base no package.json e stack do projeto) */}
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[simple-icons--vite]" />
+    <StackItem className="icon-[simple-icons--vercel]" />
+    <StackItem className="icon-[simple-icons--zustand]" />
+    <StackItem className="icon-[simple-icons--workbox]" />
+    <StackItem className="icon-[simple-icons--webcomponentsdotorg]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section>
+    ## Funcionalidades Principais
+
+    * **4 modos de jogo** e **multiplayer local**
+    * **Sistema de conquistas** e feedback com sons/animações
+    * **PWA completo** (instalável e com suporte offline)
+    * **Compartilhamento nativo** via Web Share API
+    * **Acessibilidade**: teclado e leitores de tela
+  </section>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## Arquitetura e Stack Tecnológico
+
+    | Categoria | Tecnologia | Propósito |
+    | :--- | :--- | :--- |
+    | **Framework** | React | Interface declarativa |
+    | **Linguagem** | TypeScript | Tipagem estática |
+    | **Build Tool** | Vite | DX e bundling rápidos |
+    | **PWA** | Service Worker/Workbox | Instalação e offline |
+    | **Gerenciamento de estado** | Zustand | Store simples e previsível |
+    | **Hospedagem** | Vercel | Deploy e CDN |
+  </section>
+
+
+  
+
+</article>
+
+

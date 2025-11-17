@@ -1,0 +1,142 @@
+---
+title: "Tempero Tech"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+
+  <header>
+    <h1>Tempero Tech</h1>
+
+    Fullstack web platform focused on modular architecture, scalability, and engineering automation. The project evolved with strong emphasis on **modern front-end architecture**, **Code Splitting**, **DRY**, **visual refinement**, **observability**, and **matrix CI/CD** with Slack integration.
+
+    <div className="mt-4 flex items-center justify-center gap-4">
+      <img src="/images/tempero-tech/logo.png" alt="Tempero Tech - Logo" width="160" />
+    </div>
+
+    <Callout className="flex flex-row gap-2 mt-4" type="info" title="Context">
+      The evolution was documented in posts covering architectural decisions, automations, and features like geolocation with the Haversine formula to find nearby points.
+    </Callout>
+  </header>
+
+  {/* Narrative (product‑applied proposal) */}
+  <section>
+    ## From engineering pain to a practical proposal
+
+    ### Act 1 — The invisible bottleneck
+    In fullstack products, the front end often drifts into a “component monolith”: slow builds, tight coupling, duplicated code, and poor observability. Evolving features like “nearby places” becomes costly and imprecise.
+
+    ### Act 2 — The insight
+    Modularize by domain, apply real **code splitting**, and automate the repetitive. Standardize critical decisions (build, lint, deploy, metrics) so they’re predictable and traceable.
+
+    ### Act 3 — The proposal
+    A framework with:
+    - **Modular architecture** and true **DRY** (shared components/utilities).
+    - **Observability** from day one to reduce MTTR.
+    - **Matrix CI/CD** and dependency automation for predictable releases.
+    - **Haversine-based geolocation**, computing distances accurately with low cost.
+
+    ### Act 4 — Expected impact
+    - Lower TTFB and faster first interaction.  
+    - Fewer regressions via duplication elimination.  
+    - Safer, more frequent dependency updates.  
+    - Traceable releases with actionable metrics and alerts.
+
+    ### Act 5 — Next steps
+    Expand domains, enrich telemetry, and open SDKs for third‑party integrations.
+  </section>
+
+  <br />
+  <br />
+
+  {/* Interactive demo */}
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">Interactive demo</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[720px] rounded-lg overflow-hidden border shadow-sm">
+      <iframe
+        src="https://tempero-tech.vercel.app/"
+        className="absolute inset-0 w-full h-full"
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+      />
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  <section>
+    ## Highlights
+
+    * **Modular & Scalable Architecture:** Domain/module organization enabling independent evolution, reuse, and easier maintenance.
+    * **Code Splitting:** On-demand loading improves TTFB and initial interaction on critical routes.
+    * **DRY Principle:** Shared components and utilities reduce duplication and defects.
+    * **Visual Evolution:** Custom components and pages focused on UX and consistency.
+    * **Observability:** Instrumentation for monitoring and diagnostics.
+    * **Matrix CI/CD:** Pipelines across multiple Node versions and environments, with Slack notifications.
+    * **Dependency Automation:** Automated flows to keep the stack safely up-to-date.
+    * **Geolocation (Haversine):** Finds nearby points using the Haversine formula with lat/long distances.
+  </section>
+
+  <br />
+  <br />
+
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[vscode-icons--file-type-nextjs]" />
+    <StackItem className="icon-[simple-icons--tailwindcss]" />
+    <StackItem className="icon-[teenyicons--eslint-outline]" />
+    <StackItem className="icon-[simple-icons--vercel]" />
+    <StackItem className="icon-[simple-icons--github]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## Architecture & Tech Stack
+
+| Category | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Framework** | Next.js (App Router) | Hybrid rendering, modern routing, and excellent DX. |
+| **UI/Styling** | Tailwind CSS | Fast, consistent styling through utilities. |
+| **Language** | TypeScript | Static typing for robustness and maintainability. |
+| **Component Model** | React | Reusable components and composition. |
+| **Quality** | ESLint | Static analysis and code conventions. |
+| **CI/CD** | GitHub Actions | Matrix pipelines and dependency automation. |
+| **Hosting** | Vercel | Continuous deploy and global performance. |
+
+    The nearby-location feature using **Haversine** exemplifies solving real-world needs with precision and good UX.
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## LinkedIn Post
+
+    <div className="relative w-full max-w-3xl mx-auto">
+      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7193392720340520961?collapsed=1" height="550" width="504" frameborder="0" allowfullscreen="" title="Embedded LinkedIn Post"></iframe>
+    </div>
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## References
+
+    - <LinkPreview url="https://www.linkedin.com/posts/tony-silva_video-presentation-tempero-tech-project-activity-7208815758674472960-NNEN?utm_source=share&utm_medium=member_desktop&rcm=ACoAACGgHxABQSbP79LZTAHsoml8u578caa8Jds">LinkedIn post (video)</LinkPreview>
+    - <LinkPreview url="https://www.linkedin.com/posts/tony-silva_frontend-nextjs-webdevelopment-activity-7208007330301386752-vziF?utm_source=share&utm_medium=member_desktop&rcm=ACoAACGgHxABQSbP79LZTAHsoml8u578caa8Jds">LinkedIn post (architecture & automation)</LinkPreview>
+    - <LinkPreview url="https://www.linkedin.com/posts/tony-silva_pt-br-aplica%C3%A7%C3%A3o-httpslnkdindjda4qgc-activity-7193392913924403202-Z1CU?utm_source=share&utm_medium=member_desktop&rcm=ACoAACGgHxABQSbP79LZTAHsoml8u578caa8Jds">First post (Haversine)</LinkPreview>
+    - <LinkPreview url="https://tempero-tech.vercel.app/">Application</LinkPreview>
+    - <LinkPreview url="https://github.com/Tonybsilva-dev/tempero-tech/tree/develop">Repository (develop)</LinkPreview>
+  </section>
+</article>
+
+

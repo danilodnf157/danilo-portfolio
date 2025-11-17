@@ -1,0 +1,105 @@
+---
+title: Novo Atacarejo
+description: Help Center for Novo Atacarejo
+tags:
+  - Next.js
+  - Tailwind CSS
+  - TypeScript
+  - React
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+  <header>
+    <h1>Novo Atacarejo - Help Center</h1>
+    The Novo Atacarejo Help Center is an intelligent support solution developed to assist customers in the Pane de Ofertas campaign, offering an interactive validation flow to ensure proper use of cashback. The application was built with <LinkPreview url="https://react.dev/">React</LinkPreview>, <LinkPreview url="https://nextjs.org/">Next.js</LinkPreview>, <LinkPreview url="https://www.typescriptlang.org/">TypeScript</LinkPreview> and <LinkPreview url="https://tailwindcss.com/">Tailwind CSS</LinkPreview>, focusing on accessibility, responsiveness and a clean, modern component-based architecture.
+    <Callout className='flex flex-row gap-2' type="default" title="Business Context">
+      The project was born from Novo Atacarejo's need to reduce overload in the SAC (Customer Service) during the Pane de Ofertas campaign, offering an official support channel that clarifies doubts and guides customers through a structured validation flow to ensure proper use of the cashback system.
+    </Callout>
+  </header>
+
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">
+      Interactive demonstration
+    </div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[600px] rounded-lg overflow-hidden border shadow-sm">
+      <div className="absolute inset-0 w-full h-full">
+        <div className="w-[125%] h-[125%] origin-top-left scale-[0.8]">
+          <iframe
+            src="https://suporte.novoatacarejo.dilis.com.br/"
+            className="w-full h-full"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  <section>
+    ## Main Features
+
+    - **Intelligent Support Wizard:** Conditional question flow that validates each step necessary for cashback.
+    - **Complete Analytics System:** Detailed tracking of interactions, clicks and user behavior.
+    - **Integrated NPS Survey:** Satisfaction evaluation with 3 specific questions about service.
+    - **Interactive FAQ:** Frequently asked questions section with accordion-style answers.
+    - **Responsive Design:** Interface optimized for desktop and mobile with intuitive navigation.
+    - **Contact Form:** Integration with email system for cases requiring manual support.
+  </section>
+
+  <br />
+  <br />
+
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[vscode-icons--file-type-nextjs]" />
+    <StackItem className="icon-[simple-icons--tailwindcss]" />
+    <StackItem className="icon-[simple-icons--prisma]" />
+    <StackItem className="icon-[simple-icons--vitest]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## Architecture & Stack
+
+    | Category            | Technology                | Purpose                                                        |
+    | :------------------- | :----------------------- | :--------------------------------------------------------------- |
+    | **Main Framework** | React / Next.js           | Declarative interface based on components and App Router.        |
+    | **Language**           | TypeScript                | Static typing for security and maintainability.               |
+    | **Styling**         | Tailwind CSS              | Utility-first CSS for fast and consistent development.      |
+    | **Database**      | Prisma + PostgreSQL       | ORM for data management and migrations.                      |
+    | **Validation**           | Zod                       | Schema and type validation at runtime.                          |
+    | **Testing**              | Vitest + Testing Library  | Unit and integration tests.                                 |
+    | **Analytics**           | Custom API           | Proprietary system for metrics tracking.                      |
+    | **Hosting**          | Vercel                    | CI/CD and global CDN for performance.                              |
+  </section>
+
+  <section className="mt-8">
+    ## Intelligent Support Flow
+
+    The system implements a 9-step wizard that validates each condition necessary for cashback:
+
+    1. **Novo Clube Registration** - Verifies if the user was registered before purchase
+    2. **Participating Products** - Confirms if purchased products are on the cashback list
+    3. **Purchase Location** - Validates if it was at a physical Novo Atacarejo store
+    4. **Checkout Identification** - Confirms if CPF was provided at the POS
+    5. **Release Deadline** - Verifies if 48 hours have passed since purchase
+    6. **App Consultation** - Guides on how to check the balance
+    7. **Balance Validity** - Confirms if the cashback is still valid
+    8. **Checkout Usage** - Verifies if the user informed about cashback usage
+    9. **Virtual Card** - Confirms if the user has the app in hand
+
+    Each step offers specific guidance and targeted CTAs when necessary.
+  </section>
+</article>
+

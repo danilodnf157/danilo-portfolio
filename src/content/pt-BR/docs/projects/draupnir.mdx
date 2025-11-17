@@ -1,0 +1,142 @@
+---
+title: "Draupnir — Design System"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+
+  <header>
+    <h1>Draupnir — Design System</h1>
+
+    Sistema de design moderno, acessível e performático, construído com **React**, **TypeScript** e **Tailwind CSS**, inspirado no anel nórdico que se multiplica — uma metáfora para **reuso** e **escalabilidade** de componentes. O foco é oferecer consistência visual, **tokens de design**, **temas**, acessibilidade e uma ótima DX com documentação via **Storybook**.
+
+    <div className="mt-4 flex items-center justify-center gap-4">
+      <img src="/images/draupnir/logo.png" alt="Draupnir - Logo" width="160" />
+    </div>
+
+    <Callout className="flex flex-row gap-2 mt-4" type="default" title="Origem da iniciativa">
+      A ideia surgiu pela curiosidade e pela necessidade real de padronizar e agilizar o desenvolvimento de interfaces em uma empresa onde atuei e não havia times de UX/UI. Assumi a responsabilidade pelo front-end e criei o projeto para validar a viabilidade de uma base comum com identidade visual da marca, documentação, centralização de decisões e distribuição para múltiplas plataformas (web e mobile).
+    </Callout>
+  </header>
+
+  {/* Narrativa (proposta aplicada ao produto) */}
+  <section>
+    ## Da inconsistência à plataforma de componentes
+
+    ### Ato 1 — O mosaico desconexo
+    Em produtos com múltiplas frentes — e especialmente em contextos sem time de UX/UI — a UI diverge: cores diferentes, espaçamentos aleatórios, comportamentos quebrados e acessibilidade esquecida. Como responsável pelo front-end, vi que corrigir caso a caso consumia tempo e escalava mal entre times.
+
+    ### Ato 2 — O insight
+    Consolidar decisões de UI em **tokens de design** alinhados à identidade da marca; organizar o ecossistema por **Atomic Design**; documentar em **Storybook** com exemplos executáveis; garantir **acessibilidade**, **temas** e **centralização** técnica para acelerar todos os times.
+
+    ### Ato 3 — A proposta
+    Um design system com:
+    - **Tokens** (cores, tipografia, espaçamento, sombras) versionados e brand-ready.  
+    - **Componentes atômicos → moléculas → organismos**, com APIs coesas.  
+    - **Acessibilidade** (ARIA, navegação por teclado).  
+    - **Temas** claro/escuro e extensibilidade.  
+    - **Documentação** interativa em **Storybook**, guia de uso e boas práticas.  
+    - **Distribuição multi-plataforma** (web e mobile) com pacotes versionados.  
+    - Tipagem forte em **TypeScript** para DX e segurança.
+
+    ### Ato 4 — Impacto esperado
+    - Redução drástica de inconsistências visuais.  
+    - Aceleração no desenvolvimento de telas (reuso real).  
+    - Menos bugs de acessibilidade.  
+    - Entregas mais previsíveis e coesas entre times.  
+    - Onboarding mais rápido graças à documentação e padrões centralizados.
+
+    ### Ato 5 — Próximos passos
+    Expandir o catálogo (tabelas, data viz), publicar pacotes e guias de migração entre apps, incluindo presets para mobile.
+  </section>
+
+  <br />
+  <br />
+
+  {/* Demo interativa */}
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">Demo interativa</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[600px] rounded-lg overflow-hidden border shadow-sm">
+      <iframe
+        src="https://draupnir.vercel.app/"
+        className="absolute inset-0 w-full h-full"
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+      />
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  <section>
+    ## Principais Destaques
+
+    * **Tokens de Design:** Paleta, tipografia, espaçamentos e sombras centralizados.  
+    * **Atomic Design:** Camadas de componentes (átomos → moléculas → organismos).  
+    * **Acessibilidade:** Suporte ARIA e navegação por teclado.  
+    * **Temas:** Suporte nativo a light/dark e extensões.  
+    * **Responsivo:** Componentes adaptáveis a diferentes telas.  
+    * **Performance:** Tree-shaking e APIs enxutas.  
+    * **TypeScript:** Tipagem forte ponta a ponta.  
+    * **Storybook:** Documentação interativa e exemplos práticos.
+  </section>
+
+  <br />
+  <br />
+
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[simple-icons--tailwindcss]" />
+    <StackItem className="icon-[simple-icons--storybook]" />
+    <StackItem className="icon-[simple-icons--jest]" />
+    <StackItem className="icon-[simple-icons--vercel]" />
+    <StackItem className="icon-[simple-icons--npm]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## Arquitetura e Stack Tecnológico
+
+| Categoria | Tecnologia | Propósito |
+| :--- | :--- | :--- |
+| **Framework** | React | Modelo de componentes e composição. |
+| **Linguagem** | TypeScript | Tipagem estática e DX aprimorada. |
+| **Estilos** | Tailwind CSS | Utilitários para consistência e velocidade. |
+| **Docs** | Storybook | Documentação interativa e playground. |
+| **Testes** | Jest | Testes unitários de componentes e hooks. |
+| **Build/Distribuição** | Vercel / npm | Deploy e publicação de pacotes. |
+
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## Publicação no LinkedIn
+
+    <div className="relative w-full max-w-3xl mx-auto">
+      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7163016278025068545?collapsed=1" height="532" width="504" frameborder="0" allowfullscreen="" title="Publicação incorporada"></iframe>
+    </div>
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## Referências
+
+    - <LinkPreview url="https://draupnir.vercel.app/">Aplicação</LinkPreview>
+    - <LinkPreview url="https://github.com/Tonybsilva-dev/Draupnir">Repositório</LinkPreview>
+    - <LinkPreview url="https://www.linkedin.com/posts/tony-silva_designsystem-frontend-react-activity-7163016278742351872-V2S0?utm_source=share&utm_medium=member_desktop&rcm=ACoAACGgHxABQSbP79LZTAHsoml8u578caa8Jds">Publicação no LinkedIn</LinkPreview>
+  </section>
+</article>
+
+

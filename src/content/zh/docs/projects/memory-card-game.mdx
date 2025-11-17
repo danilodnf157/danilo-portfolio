@@ -1,0 +1,123 @@
+---
+title: "Memory Card Game"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+  <header>
+    <h1>Memory Card Game</h1>
+  </header>
+
+  {/* 叙事（作者项目） */}
+  <section>
+    ## 从简单想法到完整的 PWA 记忆卡游戏
+
+    ### 第一幕 —— 选择正确的练习
+    我希望在不依赖复杂后端的前提下，强化推理与工程实践。记忆卡游戏似乎“过于简单”—— 直到我把它设为 UX、可访问性与 PWA 的综合练兵场。
+
+    <Callout type="warning" title="假设">
+      只要足够流畅、可访问并提供清晰的进度（成就/模式），它就能从休闲小游戏升级为“有粘性”的体验。
+    </Callout>
+
+    ### 第二幕 —— 设计洞见
+    将“翻牌”拆解为一系列微决策：节奏、展示时机、视听提示与难度曲线，目标是在保持流畅的同时避免认知疲劳。
+
+    ### 第三幕 —— 构建
+    - **架构：** React + TypeScript，Vite 构建，完整 PWA（可安装 + 离线）。
+    - **循环：** 精准的计时、进度持久化与 4 种模式。
+    - **可访问性：** 完整键盘与读屏支持、受控焦点与 ARIA。
+    - **反馈：** 每个关键事件均配以同步动画与音效。
+
+    ### 第四幕 —— 预期影响
+    - 因成就与模式多样而延长会话时长。
+    - 通过清晰提示与稳定节奏减少“暴躁退出”。
+    - PWA 离线游玩带来高复玩性，尤其适合移动端。
+
+    <Callout type="success" title="实践成果">
+      我的第二个网页游戏，将可访问 UX 与前端工程最佳实践应用于原生网页游戏。
+    </Callout>
+
+    ### 第五幕 —— 留下的资产
+    除了乐趣，还沉淀了一套可复用脚手架，用于快速原型化强调进度、性能与可访问性的网页游戏。
+  </section>
+
+  <section className="mt-6">
+    ## 模式与成就
+
+    - **经典模式：** 随机配对，标准节奏。
+    - **限时挑战：** 倒计时，快速连击奖励。
+    - **禅模式（Zen）：** 强调专注与准确，无时间压力。
+    - **本地对战：** 两位玩家同一设备对弈。
+    - **成就（示例）：** “零失误”“极速玩家”“序列大师”“离线马拉松（PWA）”。
+  </section>
+
+  {/* 交互演示 */}
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">交互演示</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[600px] rounded-lg overflow-hidden border shadow-sm">
+      <div className="absolute inset-0 w-full h-full">
+        <div className="w-[140%] h-[140%] origin-top-left scale-[0.7]">
+          <iframe
+            src="https://memory-card-game-antonio-s.vercel.app/"
+            className="w-full h-full"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  {/* 技术走马灯 */}
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[simple-icons--vite]" />
+    <StackItem className="icon-[simple-icons--vercel]" />
+    <StackItem className="icon-[simple-icons--zustand]" />
+    <StackItem className="icon-[simple-icons--workbox]" />
+    <StackItem className="icon-[simple-icons--webcomponentsdotorg]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section>
+    ## 主要特性
+
+    * **4 种模式** 与 **本地多人**
+    * **成就系统**，并提供同步的声音/动画反馈
+    * **完整 PWA**（可安装，支持离线）
+    * **原生分享**（Web Share API）
+    * **可访问性**：键盘导航与读屏支持
+  </section>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## 架构与技术栈
+
+    | 分类 | 技术 | 作用 |
+    | :--- | :--- | :--- |
+    | **框架** | React | 声明式界面 |
+    | **语言** | TypeScript | 静态类型 |
+    | **构建工具** | Vite | 高效开发体验与打包 |
+    | **PWA** | Service Worker/Workbox | 安装与离线能力 |
+    | **状态管理** | Zustand | 简洁可预期的 store |
+    | **托管** | Vercel | 部署与 CDN |
+  </section>
+
+
+  
+
+</article>
+
+

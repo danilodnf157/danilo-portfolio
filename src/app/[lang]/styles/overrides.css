@@ -1,0 +1,163 @@
+body {
+  font-family: 'sans-serif', 'Arial', 'Microsoft Yahei';
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+a,
+summary,
+button,
+input,
+[tabindex]:not([tabindex='-1']) {
+  &:focus-visible {
+    box-shadow: none;
+  }
+}
+
+.button-switch {
+  @apply max-md:hidden;
+  svg {
+    @apply size-[14px];
+  }
+}
+
+/* Esconde o botão "copy page" especificamente na página index */
+/* Usando múltiplos seletores para garantir que funcione */
+html[data-page="/"] button[title*="Copy"],
+html[data-page="/"] button[title*="copy"],
+html[data-page*="/index"] button[title*="Copy"],
+html[data-page*="/index"] button[title*="copy"],
+[data-pathname="/"] button[title*="Copy"],
+[data-pathname="/"] button[title*="copy"],
+[data-pathname*="/index"] button[title*="Copy"],
+[data-pathname*="/index"] button[title*="copy"],
+body:has([data-pathname="/"]) button[title*="Copy"],
+body:has([data-pathname="/"]) button[title*="copy"],
+body:has([data-pathname*="/index"]) button[title*="Copy"],
+body:has([data-pathname*="/index"]) button[title*="copy"],
+/* Seletores baseados em aria-label */
+html[data-page="/"] button[aria-label*="Copy"],
+html[data-page="/"] button[aria-label*="copy"],
+html[data-page*="/index"] button[aria-label*="Copy"],
+html[data-page*="/index"] button[aria-label*="copy"],
+/* Seletores baseados na classe nextra-copy */
+html[data-page="/"] .nextra-copy,
+html[data-page*="/index"] .nextra-copy,
+[data-pathname="/"] .nextra-copy,
+[data-pathname*="/index"] .nextra-copy,
+body:has([data-pathname="/"]) .nextra-copy,
+body:has([data-pathname*="/index"]) .nextra-copy {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Limita a largura do navbar para alinhar com o ResumeLayout (max-w-7xl = 1280px) */
+.nextra-nav-container,
+.nextra-navbar,
+nav[class*="nextra-nav"],
+header[class*="nextra"],
+nav.nextra-nav-container {
+  max-width: 1280px !important;
+  margin-inline: auto !important;
+  padding-inline: 2rem !important;
+  width: 100% !important;
+}
+
+/* Garante que o wrapper interno do navbar também respeite a largura */
+.nextra-nav-container > *,
+.nextra-navbar > *,
+nav[class*="nextra-nav"] > * {
+  max-width: 100%;
+}
+
+/* Garante que o conteúdo principal tenha a mesma largura e padding do header */
+.nextra-content,
+main[class*="nextra"],
+article[class*="nextra"],
+.nextra-main-content {
+  max-width: 1280px !important;
+  margin-inline: auto !important;
+  padding-inline: 2rem !important;
+  width: 100% !important;
+}
+
+/* Remove padding extra do wrapper de conteúdo do Nextra na página index */
+html[data-page="/"] .nextra-content,
+html[data-page="/"] main[class*="nextra"],
+html[data-page="/"] article[class*="nextra"],
+[data-pathname="/"] .nextra-content,
+[data-pathname="/"] main[class*="nextra"],
+[data-pathname="/"] article[class*="nextra"],
+body:has([data-pathname="/"]) .nextra-content,
+body:has([data-pathname="/"]) main[class*="nextra"],
+body:has([data-pathname="/"]) article[class*="nextra"] {
+  max-width: 1280px !important;
+  margin-inline: auto !important;
+  padding-inline: 0 !important;
+  width: 100% !important;
+}
+
+/* Garante que o container do ResumeLayout tenha a mesma largura do header */
+html[data-page="/"] .container,
+[data-pathname="/"] .container,
+body:has([data-pathname="/"]) .container {
+  max-width: 1280px !important;
+  margin-inline: auto !important;
+  padding-inline: 2rem !important;
+  width: 100% !important;
+}
+
+/* Esconde a sidebar na página index */
+html[data-page="/"] .nextra-sidebar-container,
+html[data-page="/"] aside[class*="nextra-sidebar"],
+[data-pathname="/"] .nextra-sidebar-container,
+[data-pathname="/"] aside[class*="nextra-sidebar"],
+body:has([data-pathname="/"]) .nextra-sidebar-container,
+body:has([data-pathname="/"]) aside[class*="nextra-sidebar"] {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  min-width: 0 !important;
+}
+
+/* Ajusta o layout do conteúdo principal quando a sidebar está escondida */
+html[data-page="/"] .nextra-main,
+[data-pathname="/"] .nextra-main,
+body:has([data-pathname="/"]) .nextra-main {
+  margin-left: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Esconde "Página Inicial" na sidebar quando estiver dentro de docs */
+/* Seletores para quando estiver em qualquer página dentro de /docs */
+[data-pathname*="/docs"] .nextra-sidebar-container a[href="/pt-BR"],
+[data-pathname*="/docs"] .nextra-sidebar-container a[href="/en"],
+[data-pathname*="/docs"] .nextra-sidebar-container a[href="/zh"],
+[data-pathname*="/docs"] .nextra-sidebar-container a[href="/pt-BR/"],
+[data-pathname*="/docs"] .nextra-sidebar-container a[href="/en/"],
+[data-pathname*="/docs"] .nextra-sidebar-container a[href="/zh/"],
+[data-pathname*="/docs"] aside[class*="nextra-sidebar"] a[href="/pt-BR"],
+[data-pathname*="/docs"] aside[class*="nextra-sidebar"] a[href="/en"],
+[data-pathname*="/docs"] aside[class*="nextra-sidebar"] a[href="/zh"],
+[data-pathname*="/docs"] aside[class*="nextra-sidebar"] a[href="/pt-BR/"],
+[data-pathname*="/docs"] aside[class*="nextra-sidebar"] a[href="/en/"],
+[data-pathname*="/docs"] aside[class*="nextra-sidebar"] a[href="/zh/"],
+body:has([data-pathname*="/docs"]) .nextra-sidebar-container a[href="/pt-BR"],
+body:has([data-pathname*="/docs"]) .nextra-sidebar-container a[href="/en"],
+body:has([data-pathname*="/docs"]) .nextra-sidebar-container a[href="/zh"],
+body:has([data-pathname*="/docs"]) .nextra-sidebar-container a[href="/pt-BR/"],
+body:has([data-pathname*="/docs"]) .nextra-sidebar-container a[href="/en/"],
+body:has([data-pathname*="/docs"]) .nextra-sidebar-container a[href="/zh/"],
+body:has([data-pathname*="/docs"]) aside[class*="nextra-sidebar"] a[href="/pt-BR"],
+body:has([data-pathname*="/docs"]) aside[class*="nextra-sidebar"] a[href="/en"],
+body:has([data-pathname*="/docs"]) aside[class*="nextra-sidebar"] a[href="/zh"],
+body:has([data-pathname*="/docs"]) aside[class*="nextra-sidebar"] a[href="/pt-BR/"],
+body:has([data-pathname*="/docs"]) aside[class*="nextra-sidebar"] a[href="/en/"],
+body:has([data-pathname*="/docs"]) aside[class*="nextra-sidebar"] a[href="/zh/"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}

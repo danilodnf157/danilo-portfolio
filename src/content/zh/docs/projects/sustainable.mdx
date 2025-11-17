@@ -1,0 +1,76 @@
+---
+title: "Sustainable"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+
+  <header>
+  <h1>Sustainable</h1>
+
+  Sustainable 是一个旨在连接人们与可回收垃圾收集点的网页应用。它是在一次高强度训练营中构建的，目的是探索现代技术栈，包括 **<LinkPreview url="https://react.dev/">React</LinkPreview>、<LinkPreview url="https://nextjs.org/">Next.js</LinkPreview>、<LinkPreview url="https://www.typescriptlang.org/">TypeScript</LinkPreview> 和 <LinkPreview url="https://tailwindcss.com/">Tailwind CSS</LinkPreview>**，重点关注无障碍性、响应式和简洁的组件化架构。
+
+  <Callout className='flex flex-row gap-2' type="info" title="注意">
+  演示内容。你可以根据你的实现和数据源调整此处的文案。
+  </Callout>
+  </header>
+
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">交互式演示</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[600px] rounded-lg overflow-hidden border shadow-sm">
+    <div className="absolute inset-0 w-full h-full">
+        <div className="w-[125%] h-[125%] origin-top-left scale-[0.8]">
+      <iframe
+        src="https://sustainable-antonio-s.vercel.app/" 
+        className="absolute inset-0 w-full h-full"
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+      />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  <section>
+    ## 主要特性
+
+    * **按位置和物品搜索：** 可根据城市/州和材料类型筛选收集点。
+    * **无障碍界面：** 支持键盘导航和语义化结构。
+    * **响应式设计：** 针对桌面和移动端优化。
+    * **清晰的数据模型：** 实体与展示层分离。
+  </section>
+
+  <br />
+  <br />
+
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[vscode-icons--file-type-nextjs]" />
+    <StackItem className="icon-[simple-icons--tailwindcss]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## 架构与技术栈
+
+| 类别 | 技术 | 作用 |
+| :--- | :--- | :--- |
+| **主框架** | React / Next.js | 声明式、组件化 UI 及应用路由。 |
+| **语言** | TypeScript | 静态类型，提升安全性和可维护性。 |
+| **样式** | Tailwind CSS | 实用优先的 CSS，快速开发。 |
+| **HTTP** | Fetch/Axios | 与 API 和数据服务交互。 |
+| **托管** | Vercel | CI/CD 与全球 CDN。 |
+
+  </section>
+
+</article>

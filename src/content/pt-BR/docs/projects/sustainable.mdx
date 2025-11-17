@@ -1,0 +1,78 @@
+---
+title: "Sustainable"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+
+  <header>
+  <h1>Sustainable</h1>
+
+  Sustainbale is a web application designed to connect people to collection points for recyclable waste. It was built during an intensive bootcamp to explore a modern stack with **<LinkPreview url="https://react.dev/">React</LinkPreview>, <LinkPreview url="https://nextjs.org/">Next.js</LinkPreview>, <LinkPreview url="https://www.typescriptlang.org/">TypeScript</LinkPreview> and <LinkPreview url="https://tailwindcss.com/">Tailwind CSS</LinkPreview>**, focusing on accessibility, responsiveness and a clean component‑based architecture.
+
+  <Callout className='flex flex-row gap-2' type="info" title="Notes">
+  Demo content. You can adapt the copy here to the specifics of your implementation and data sources.
+  </Callout>
+  </header>
+
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">Interactive demo</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[600px] rounded-lg overflow-hidden border shadow-sm">
+      <div className="absolute inset-0 w-full h-full">
+        <div className="w-[125%] h-[125%] origin-top-left scale-[0.8]">
+      <iframe
+        src="https://sustainable-antonio-s.vercel.app/" 
+        className="absolute inset-0 w-full h-full"
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+      />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  <section>
+    ## Key Features
+
+    * **Search by location and items:** Filter collection points by city/state and material types.
+    * **Accessible UI:** Keyboard navigation and semantic landmarks.
+    * **Responsive design:** Optimized for desktop and mobile.
+    * **Clean data model:** Clear separation between entities and presentation.
+  </section>
+
+  <br />
+  <br />
+
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[vscode-icons--file-type-nextjs]" />
+    <StackItem className="icon-[simple-icons--tailwindcss]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## Architecture & Stack
+
+| Category | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Main Framework** | React / Next.js | Declarative, component‑based UI and App Router. |
+| **Language** | TypeScript | Static typing for safety and maintainability. |
+| **Styling** | Tailwind CSS | Utility‑first CSS for rapid development. |
+| **HTTP** | Fetch/Axios | Interact with APIs and data services. |
+| **Hosting** | Vercel | CI/CD and global CDN. |
+
+  </section>
+
+</article>
+
+

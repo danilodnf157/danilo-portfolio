@@ -1,0 +1,142 @@
+---
+title: "Draupnir — Design System"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+
+  <header>
+    <h1>Draupnir — Design System</h1>
+
+    A modern, accessible, and high‑performance design system built with **React**, **TypeScript**, and **Tailwind CSS**. Inspired by the Norse ring that multiplies itself, Draupnir symbolizes **reusability** and **scalability** of components. It provides visual consistency, **design tokens**, **themes**, accessibility, and first‑class DX with **Storybook** documentation.
+
+    <div className="mt-4 flex items-center justify-center gap-4">
+      <img src="/images/draupnir/logo.png" alt="Draupnir - Logo" width="160" />
+    </div>
+
+    <Callout className="flex flex-row gap-2 mt-4" type="default" title="Initiative & motivation">
+      This project was born from curiosity and a real need to standardize and speed up interface development in a company where I worked without dedicated UX/UI teams. Owning the front-end, I designed this system to validate a common base with brand identity, documentation, centralization of decisions and distribution across multiple platforms (web and mobile).
+    </Callout>
+  </header>
+
+  {/* Narrative (product‑applied proposal) */}
+  <section>
+    ## From inconsistency to a component platform
+
+    ### Act 1 — The fragmented mosaic
+    In multi‑team products — especially without UX/UI teams — UI drifts: mismatched colors, random spacing, broken behavior, and forgotten accessibility. As the front‑end owner, I saw that fixing case by case didn’t scale across teams.
+
+    ### Act 2 — The insight
+    Consolidate UI decisions into brand‑aligned **design tokens**; organize the ecosystem with **Atomic Design**; document with **Storybook**; enforce **accessibility**, **themes**, and **centralization** from day one to speed up all teams.
+
+    ### Act 3 — The proposal
+    A design system with:
+    - Versioned **tokens** (colors, typography, spacing, shadows) ready for branding.  
+    - **Atomic Design** (atoms → molecules → organisms) with cohesive APIs.  
+    - **Accessibility** (ARIA, keyboard navigation).  
+    - **Themes** (light/dark) and extensibility.  
+    - **Documentation** in **Storybook**, usage guides and best practices.  
+    - **Multi‑platform distribution** (web and mobile) with versioned packages.  
+    - Strong **TypeScript** typing for DX and safety.
+
+    ### Act 4 — Expected impact
+    - Dramatically fewer visual inconsistencies.  
+    - Faster screen delivery through real reuse.  
+    - Fewer accessibility bugs.  
+    - More predictable, coherent delivery across teams.  
+    - Faster onboarding thanks to documentation and centralized standards.
+
+    ### Act 5 — Next steps
+    Expand the catalog (tables, data viz), publish packages, and migration guides across apps, including presets for mobile.
+  </section>
+
+  <br />
+  <br />
+
+  {/* Interactive demo */}
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">Interactive demo</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[600px] rounded-lg overflow-hidden border shadow-sm">
+      <iframe
+        src="https://draupnir.vercel.app/"
+        className="absolute inset-0 w-full h-full"
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+      />
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  <section>
+    ## Highlights
+
+    * **Design Tokens:** Centralized palette, typography, spacing, shadows.  
+    * **Atomic Design:** Layers of components (atoms → molecules → organisms).  
+    * **Accessibility:** ARIA support and keyboard navigation.  
+    * **Themes:** Native light/dark and extensibility.  
+    * **Responsive:** Components adaptable to different screens.  
+    * **Performance:** Tree‑shaking and lean APIs.  
+    * **TypeScript:** Strong typing end‑to‑end.  
+    * **Storybook:** Interactive docs and practical examples.
+  </section>
+
+  <br />
+  <br />
+
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[simple-icons--tailwindcss]" />
+    <StackItem className="icon-[simple-icons--storybook]" />
+    <StackItem className="icon-[simple-icons--jest]" />
+    <StackItem className="icon-[simple-icons--vercel]" />
+    <StackItem className="icon-[simple-icons--npm]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## Architecture & Tech Stack
+
+| Category | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Framework** | React | Component model and composition. |
+| **Language** | TypeScript | Static typing and improved DX. |
+| **Styling** | Tailwind CSS | Utility‑first consistency and speed. |
+| **Docs** | Storybook | Interactive documentation and playground. |
+| **Testing** | Jest | Unit tests for components and hooks. |
+| **Build/Distribution** | Vercel / npm | Deploy and package publishing. |
+
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## LinkedIn Post
+
+    <div className="relative w-full max-w-3xl mx-auto">
+      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7163016278025068545?collapsed=1" height="532" width="504" frameborder="0" allowfullscreen="" title="Embedded LinkedIn Post"></iframe>
+    </div>
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## References
+
+    - <LinkPreview url="https://draupnir.vercel.app/">Application</LinkPreview>
+    - <LinkPreview url="https://github.com/Tonybsilva-dev/Draupnir">Repository</LinkPreview>
+    - <LinkPreview url="https://www.linkedin.com/posts/tony-silva_designsystem-frontend-react-activity-7163016278742351872-V2S0?utm_source=share&utm_medium=member_desktop&rcm=ACoAACGgHxABQSbP79LZTAHsoml8u578caa8Jds">LinkedIn Post</LinkPreview>
+  </section>
+</article>
+
+

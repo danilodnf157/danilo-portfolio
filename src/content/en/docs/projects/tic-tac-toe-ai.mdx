@@ -1,0 +1,102 @@
+---
+title: "Tic Tac Toe - AI"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+  <header>
+    <h1>Tic Tac Toe - AI</h1>
+  </header>
+
+  {/* Narrative (personal project) */}
+  <section>
+    ## From web‑game curiosity to practicing algorithms
+
+    ### Act 1 — The spark
+    Native web games always fascinated me. To exercise **programming logic** and **algorithms**, I turned a classic into a lab: tic‑tac‑toe.
+
+    <Callout type="warning" title="Personal challenge">
+      Build a simple yet convincing AI that plays well and reacts fast — no external engines.
+    </Callout>
+
+    ### Act 2 — The idea
+    Use clear heuristics (block win, look for win, prioritize center/corners) and keep a minimalist, responsive UI.
+
+    ### Act 3 — The experiment
+    Implemented with **React** + **TypeScript** and **Tailwind CSS**, UI using **Radix UI** and **Lucide** icons. **State management** uses **Zustand**, structuring move history and a toggleable AI mode.
+
+    ### Act 4 — What I learned
+    - Lean, predictable state modeling
+    - Separation of rules (game logic) from rendering
+    - Simple heuristics can deliver a fun AI for casual games
+
+    
+  </section>
+
+  {/* Interactive demo */}
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">Interactive demo</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[600px] rounded-lg overflow-hidden border shadow-sm">
+      <div className="absolute inset-0 w-full h-full">
+        <div className="w-[140%] h-[140%] origin-top-left scale-[0.7]">
+          <iframe
+            src="https://tic-tac-toe-ai-iota.vercel.app/"
+            className="w-full h-full"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  {/* Tech marquee */}
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[simple-icons--tailwindcss]" />
+    <StackItem className="icon-[simple-icons--radixui]" />
+    <StackItem className="icon-[simple-icons--lucide]" />
+    <StackItem className="icon-[simple-icons--zustand]" />
+    <StackItem className="icon-[simple-icons--vercel]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section>
+    ## Key Features
+
+    * **Play against AI** using simple heuristics and fast responses
+    * **Match history** and quick restart
+    * **Responsive, accessible UI**
+    * **Subtle animations** and clean visuals
+  </section>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## Architecture & Tech Stack
+
+    | Category | Technology | Purpose |
+    | :--- | :--- | :--- |
+    | **Framework** | React | Declarative component-based UI |
+    | **Language** | TypeScript | Static typing |
+    | **Styling** | Tailwind CSS | Utility-first CSS |
+    | **UI** | Radix UI | Accessible primitives |
+    | **Icons** | Lucide Icons | Lightweight icons |
+    | **State management** | Zustand | Simple, predictable store |
+    | **Hosting** | Vercel | Deploy & CDN |
+  </section>
+
+</article>
+
+

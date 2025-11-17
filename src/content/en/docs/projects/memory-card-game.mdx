@@ -1,0 +1,123 @@
+---
+title: "Memory Card Game"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+  <header>
+    <h1>Memory Card Game</h1>
+  </header>
+
+  {/* Narrative (author project) */}
+  <section>
+    ## From a simple idea to a complete PWA memory game
+
+    ### Act 1 — Choosing the right challenge
+    I wanted an exercise that pushed reasoning without heavy backends. A memory game looked too simple — until I decided it would be a lab for UX, accessibility and PWA craft.
+
+    <Callout type="warning" title="Hypothesis">
+      If the game were fast, accessible and offered clear progression (achievements/modes), it could move beyond casual play and become engaging.
+    </Callout>
+
+    ### Act 2 — Design insight
+    Turned “flipping cards” into micro‑decisions: pacing, reveal timing, audio/visual cues and a difficulty curve. The goal: sustain flow and avoid cognitive fatigue.
+
+    ### Act 3 — Building
+    - **Architecture:** React + TypeScript, Vite build, full PWA (install + offline).
+    - **Game loop:** precise timing, progress persistence and 4 distinct modes.
+    - **Accessibility:** full keyboard + screen reader support, managed focus and ARIA.
+    - **Feedback:** synchronized animations and sounds for every critical event.
+
+    ### Act 4 — Expected impact
+    - Longer sessions thanks to achievements and mode variety.
+    - Reduced rage‑quit due to clear cues and consistent pacing.
+    - High replayability offline (PWA) — great for mobile use.
+
+    <Callout type="success" title="Practical outcome">
+      My second web game, consolidating accessible UX and front‑end engineering best practices applied to web‑native games.
+    </Callout>
+
+    ### Act 5 — What remains
+    Beyond fun, a reusable scaffold to prototype web games focused on progression, performance and accessibility.
+  </section>
+
+  <section className="mt-6">
+    ## Game Modes & Achievements
+
+    - **Classic:** shuffled pairs, standard pacing.
+    - **Time Attack:** countdown timer, bonuses for fast combos.
+    - **Zen:** flow and precision, no time pressure.
+    - **Local Duel:** two players on the same device.
+    - **Achievements (examples):** “Flawless”, “Speedrunner”, “Sequence Master”, “Offline Marathon (PWA)”.
+  </section>
+
+  {/* Interactive demo */}
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">Interactive demo</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[600px] rounded-lg overflow-hidden border shadow-sm">
+      <div className="absolute inset-0 w-full h-full">
+        <div className="w-[140%] h-[140%] origin-top-left scale-[0.7]">
+          <iframe
+            src="https://memory-card-game-antonio-s.vercel.app/"
+            className="w-full h-full"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  {/* Tech marquee */}
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[simple-icons--vite]" />
+    <StackItem className="icon-[simple-icons--vercel]" />
+    <StackItem className="icon-[simple-icons--zustand]" />
+    <StackItem className="icon-[simple-icons--workbox]" />
+    <StackItem className="icon-[simple-icons--webcomponentsdotorg]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section>
+    ## Key Features
+
+    * **4 game modes** and **local multiplayer**
+    * **Achievement system** with synchronized sounds/animations
+    * **Full PWA** (installable with offline support)
+    * **Native sharing** via Web Share API
+    * **Accessibility**: keyboard and screen readers
+  </section>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## Architecture & Tech Stack
+
+    | Category | Technology | Purpose |
+    | :--- | :--- | :--- |
+    | **Framework** | React | Declarative UI |
+    | **Language** | TypeScript | Static typing |
+    | **Build Tool** | Vite | Fast DX & bundling |
+    | **PWA** | Service Worker/Workbox | Installable & offline |
+    | **State management** | Zustand | Simple, predictable store |
+    | **Hosting** | Vercel | Deploy & CDN |
+  </section>
+
+
+  
+
+</article>
+
+

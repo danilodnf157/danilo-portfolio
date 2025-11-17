@@ -1,0 +1,122 @@
+---
+title: "Pokedex"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+{/* The <article> tag groups all project content as an independent, complete item. */}
+<article className="prose dark:prose-invert max-w-none">
+
+  {/* The <header> contains your project introduction. */}
+  <header>
+  <h1>Pokédex</h1>
+
+    This project is a complete and interactive Pokédex, designed to provide a fast, intuitive, and visually pleasing user experience. Built with a modern tech stack including **<LinkPreview url="https://react.dev/">React</LinkPreview>, <LinkPreview url="https://nextjs.org/">Next.Js</LinkPreview>, <LinkPreview url="https://www.typescriptlang.org/">TypeScript</LinkPreview>, and <LinkPreview url="https://tailwindcss.com/">Tailwind CSS</LinkPreview>**, the app consumes the <LinkPreview url="https://pokeapi.co/">PokeAPI</LinkPreview> to deliver detailed data about the Pokémon universe.
+
+    The focus was not only to create a functional tool, but also a showcase of front-end best practices, including efficient state management with **<LinkPreview url="https://tanstack.com/query/latest">React Query</LinkPreview>**, responsive design, and a component-based architecture.
+<Callout className='flex flex-row gap-2' type="info" title="Notes" > 
+
+ Due to some limitations of the PokeAPI, translations are not available for all Pokémon in their respective languages.
+ For example (Brazilian Portuguese), the language is automatically selected based on the user's browser region and translation availability.
+
+</Callout>
+  
+  </header>
+ {/* Interactive demo in desktop aspect ratio (16:9) */}
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">Interactive demo</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[720px] rounded-lg overflow-hidden border shadow-sm">
+      <iframe
+        src="https://pokedex-v2-antonio-s.vercel.app/"
+        className="absolute inset-0 w-full h-full"
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+      />
+    </div>
+  </div>
+<br />
+<br />
+  {/* Section for the image gallery. Use a responsive grid. */}
+  <div className="left">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-1">Mobile Responsiveness</div>
+    <div className="flex justify-between items-center mt-0">
+      <img src="/images/pokedex/pokedex-mobile.png" alt="Pokédex - Mobile" width="45%" />
+      <img src="/images/pokedex/pokedex-mobile-data.png" alt="Pokédex - Mobile (Details)" width="45%" />
+    </div>
+    <br />
+    <div className="text-sm text-neutral-500 dark:text-neutral-400">Demo images of the interface (desktop and mobile).</div>
+  </div>
+
+  {/* The <section> tag groups the main features of the project. */}
+  <section>
+    ## Key Features
+
+    The application was developed with a focus on user experience and performance. Highlights include:
+
+    *   **D-Pad Listing:** The home page displays Pokémon with a D-Pad system for smooth, continuous navigation, also accessible via keyboard.
+    *   **Real-Time Search and Filtering:** Quickly find Pokémon by name or number and refine results by type.
+    *   **Immersive Details Page:** Each Pokémon has a dedicated page with complete information, including base stats, abilities, and evolution chain.
+    *   **Dynamic Background:** The details page background color dynamically adapts to the first-generation Pokédex style.
+    *   **Light and Dark Theme:** Switch between themes for comfortable viewing in different environments.
+    *   **Fully Responsive Design:** The interface adapts perfectly to any screen size, from desktops to mobile devices.
+    *   **Pokémon-Inspired Design:** The interface is inspired by the first-generation Pokédex, and on mobile, by the classic Game Boy design.
+  </section>
+
+<br />
+<br />
+
+  <Marquee
+              pauseOnHover
+              autoFill
+              gradient
+              direction="right"
+              gradientColor="var(--background)"
+              speed={60}
+            >
+              <StackItem className="icon-[simple-icons--react]" />         
+              <StackItem className="icon-[simple-icons--typescript]" />    
+              <StackItem className="icon-[vscode-icons--file-type-nextjs]" />
+              <StackItem className="icon-[simple-icons--tailwindcss]" />   
+              <StackItem className="icon-[simple-icons--reactquery]" />    
+              <StackItem className="icon-[simple-icons--axios]" />         
+              <StackItem className="icon-[teenyicons--eslint-outline]" />  
+              <StackItem className="icon-[simple-icons--vercel]" />        
+            </Marquee>
+
+<br />
+<br />
+
+  <section className="mt-8">
+    ## Architecture & Tech Stack
+
+    The project was built on a foundation of modern technologies, chosen to ensure performance, scalability, and a great development experience.
+
+
+| Category | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Main Framework** | React | Declarative, component-based UI construction. |
+| **Language** | TypeScript | Adds static typing to JavaScript for greater code robustness and maintainability. |
+| **Build Tool** | Next.Js | Provides an extremely fast development environment with Hot Module Replacement (HMR). |
+| **Styling** | Tailwind CSS | Utility-first CSS framework for rapid and efficient custom design creation. |
+| **State Management**| React Query | Server state management, caching, and API data pagination (infinite scroll). |
+| **HTTP Client** | Axios | Simplifies requests to the PokeAPI. |
+| **Linting** | ESLint | Static code analysis to find and fix problems. |
+| **Hosting** | Vercel | Deployment platform for continuous delivery and application performance. |
+
+    The architecture is **component-based**, where each part of the interface is an isolated, reusable block, making it easier to maintain and develop new features. The application's global state, especially data from the API, is efficiently managed by **React Query**, which simplifies fetching, caching, and updating remote data.
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## LinkedIn Post
+
+    <div className="relative w-full max-w-3xl mx-auto">
+      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7374284121268731904?collapsed=1" height="514" width="504" frameborder="0" allowfullscreen="" title="Embedded LinkedIn Post"></iframe>
+    </div>
+  </section>
+</article>

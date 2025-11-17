@@ -1,0 +1,109 @@
+---
+title: "Pokédex"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+
+  <header>
+  <h1>宝可梦图鉴</h1>
+
+  本项目是一个完整且交互友好的宝可梦图鉴，旨在提供快速、直观且美观的用户体验。技术栈包含 **<LinkPreview url="https://react.dev/">React</LinkPreview>、<LinkPreview url="https://nextjs.org/">Next.js</LinkPreview>、<LinkPreview url="https://www.typescriptlang.org/">TypeScript</LinkPreview> 与 <LinkPreview url="https://tailwindcss.com/">Tailwind CSS</LinkPreview>**，并使用 <LinkPreview url="https://pokeapi.co/">PokeAPI</LinkPreview> 提供详细数据。
+
+  我们不仅追求功能完善，同时也展示前端最佳实践，包括使用 **<LinkPreview url="https://tanstack.com/query/latest">React Query</LinkPreview>** 高效管理服务端状态、响应式设计以及组件化架构。
+
+  <Callout className='flex flex-row gap-2' type="info" title="提示">
+  由于 PokeAPI 的限制，并非所有宝可梦都提供完整的多语言翻译。应用会根据浏览器地区与可用性自动选择语言。
+  </Callout>
+  </header>
+
+  {/* 桌面端 16:9 交互演示 */}
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">交互演示</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[720px] rounded-lg overflow-hidden border shadow-sm">
+      <iframe
+        src="https://pokedex-v2-antonio-s.vercel.app/"
+        className="absolute inset-0 w-full h-full"
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+      />
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  {/* 移动端适配截图 */}
+  <div className="left">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-1">移动端适配</div>
+    <div className="flex justify-between items-center mt-0">
+      <img src="/images/pokedex/pokedex-mobile.png" alt="移动端界面" width="45%" />
+      <img src="/images/pokedex/pokedex-mobile-data.png" alt="移动端详情" width="45%" />
+    </div>
+    <br />
+    <div className="text-sm text-neutral-500 dark:text-neutral-400">界面演示（桌面与移动）。</div>
+  </div>
+
+  <section>
+    ## 主要特性
+
+    * **方向键列表浏览：** 支持 D‑Pad 流畅导航，同时可通过键盘操作。
+    * **实时搜索与筛选：** 可按名称或编号搜索，并按类型筛选。
+    * **沉浸式详情页：** 展示基础属性、技能与进化链。
+    * **动态背景：** 详情页背景呼应第一代图鉴风格。
+    * **明暗主题：** 支持深浅色切换。
+    * **完全响应式：** 自适应桌面与移动端。
+    * **宝可梦风格设计：** 借鉴第一代图鉴与经典 Game Boy（移动端）。
+  </section>
+
+  <br />
+  <br />
+
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[vscode-icons--file-type-nextjs]" />
+    <StackItem className="icon-[simple-icons--tailwindcss]" />
+    <StackItem className="icon-[simple-icons--reactquery]" />
+    <StackItem className="icon-[simple-icons--axios]" />
+    <StackItem className="icon-[teenyicons--eslint-outline]" />
+    <StackItem className="icon-[simple-icons--vercel]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## 架构与技术栈
+
+| 分类 | 技术 | 作用 |
+| :--- | :--- | :--- |
+| **主框架** | React | 声明式、组件化 UI。 |
+| **语言** | TypeScript | 静态类型，提升鲁棒性与可维护性。 |
+| **构建/框架** | Next.js | 现代 App Router 与出色的 DX。 |
+| **样式** | Tailwind CSS | 实用类优先的高效样式方案。 |
+| **服务端状态** | React Query | API 数据缓存、分页与同步。 |
+| **HTTP 客户端** | Axios | 便捷的 API 请求。 |
+| **代码规范** | ESLint | 提前发现与修复问题。 |
+| **托管** | Vercel | 全球加速与 CI/CD。 |
+
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## LinkedIn 发布
+
+    <div className="relative w-full max-w-3xl mx-auto">
+      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7374284121268731904?collapsed=1" height="514" width="504" frameborder="0" allowfullscreen="" title="嵌入的 LinkedIn 发布"></iframe>
+    </div>
+  </section>
+
+</article>
+
+

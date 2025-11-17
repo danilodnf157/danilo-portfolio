@@ -1,0 +1,142 @@
+---
+title: "Tempero Tech"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+
+  <header>
+    <h1>Tempero Tech</h1>
+
+    专注于模块化架构、可扩展性与工程自动化的全栈 Web 平台。前端演进强调 **现代架构**、**代码分割**、**DRY 原则**、**视觉优化**、**可观测性**，以及与 Slack 集成的 **矩阵式 CI/CD**。
+
+    <div className="mt-4 flex items-center justify-center gap-4">
+      <img src="/images/tempero-tech/logo.png" alt="Tempero Tech - 标志" width="160" />
+    </div>
+
+    <Callout className="flex flex-row gap-2 mt-4" type="info" title="背景">
+      公告记录了架构决策与自动化实践，并展示了基于 Haversine 公式的地理定位功能，用于查找附近的点位。
+    </Callout>
+  </header>
+
+  {/* 叙述（贴近产品的方案） */}
+  <section>
+    ## 从工程痛点到可行方案
+
+    ### 第一幕 — 隐形瓶颈
+    在全栈产品里，前端容易演变为“组件单体”：构建缓慢、耦合度高、代码重复、可观测性不足。像“附近点位”这样的功能演进成本高、精度也难保障。
+
+    ### 第二幕 — 灵感
+    以领域为单位进行模块化，落实 **代码分割**，并将重复劳动自动化。对构建、规范、部署与指标这些关键决策进行标准化与可追踪化。
+
+    ### 第三幕 — 方案
+    一个具备：
+    - **模块化架构** 与真正的 **DRY**（共享组件/工具）。  
+    - 自第一天起的 **可观测性**，以降低 MTTR。  
+    - **矩阵式 CI/CD** 与依赖自动化，确保可预测发布。  
+    - 基于 **Haversine** 的地理定位，以低成本获得可靠距离计算。
+
+    ### 第四幕 — 预期影响
+    - 更低的 TTFB 与更快的首轮交互。  
+    - 通过消除重复实现减少回归。  
+    - 依赖更安全、更频繁地更新。  
+    - 发布可追踪，指标与告警具备可行动性。
+
+    ### 第五幕 — 下一步
+    扩展领域边界、丰富遥测，开放 SDK 以支持第三方集成。
+  </section>
+
+  <br />
+  <br />
+
+  {/* 交互演示 */}
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">交互演示</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[720px] rounded-lg overflow-hidden border shadow-sm">
+      <iframe
+        src="https://tempero-tech.vercel.app/"
+        className="absolute inset-0 w-full h-full"
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+      />
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  <section>
+    ## 亮点
+
+    * **模块化与可扩展：** 按领域/模块组织，便于独立演进与复用。
+    * **代码分割：** 按需加载，优化关键页面的首屏体验。
+    * **DRY 原则：** 共享组件与工具函数，减少重复与缺陷。
+    * **视觉演进：** 自定义组件与页面，强化一致性与体验。
+    * **可观测性：** 监控与诊断的埋点与仪表化。
+    * **矩阵式 CI/CD：** 多 Node 版本与多环境流水线，支持 Slack 通知。
+    * **依赖自动化：** 自动流程，安全保持技术栈更新。
+    * **地理定位（Haversine）：** 基于经纬度计算距离，查找附近点位。
+  </section>
+
+  <br />
+  <br />
+
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[vscode-icons--file-type-nextjs]" />
+    <StackItem className="icon-[simple-icons--tailwindcss]" />
+    <StackItem className="icon-[teenyicons--eslint-outline]" />
+    <StackItem className="icon-[simple-icons--vercel]" />
+    <StackItem className="icon-[simple-icons--github]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## 架构与技术栈
+
+| 类别 | 技术 | 作用 |
+| :--- | :--- | :--- |
+| **框架** | Next.js (App Router) | 混合渲染、现代路由与优秀 DX。 |
+| **样式** | Tailwind CSS | 实用类优先，快速构建一致 UI。 |
+| **语言** | TypeScript | 静态类型，提升鲁棒性与可维护性。 |
+| **组件模型** | React | 可复用组件与组合式开发。 |
+| **质量** | ESLint | 静态分析与规范。 |
+| **CI/CD** | GitHub Actions | 矩阵流水线与依赖自动化。 |
+| **托管** | Vercel | 持续部署与全球加速。 |
+
+    借助 **Haversine** 的附近定位功能，项目以精准与良好体验解决真实业务需求。
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## LinkedIn 发布
+
+    <div className="relative w-full max-w-3xl mx-auto">
+      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7193392720340520961?collapsed=1" height="550" width="504" frameborder="0" allowfullscreen="" title="嵌入的 LinkedIn 发布"></iframe>
+    </div>
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## 参考
+
+    - <LinkPreview url="https://www.linkedin.com/posts/tony-silva_video-presentation-tempero-tech-project-activity-7208815758674472960-NNEN?utm_source=share&utm_medium=member_desktop&rcm=ACoAACGgHxABQSbP79LZTAHsoml8u578caa8Jds">LinkedIn（视频）</LinkPreview>
+    - <LinkPreview url="https://www.linkedin.com/posts/tony-silva_frontend-nextjs-webdevelopment-activity-7208007330301386752-vziF?utm_source=share&utm_medium=member_desktop&rcm=ACoAACGgHxABQSbP79LZTAHsoml8u578caa8Jds">LinkedIn（架构与自动化）</LinkPreview>
+    - <LinkPreview url="https://www.linkedin.com/posts/tony-silva_pt-br-aplica%C3%A7%C3%A3o-httpslnkdindjda4qgc-activity-7193392913924403202-Z1CU?utm_source=share&utm_medium=member_desktop&rcm=ACoAACGgHxABQSbP79LZTAHsoml8u578caa8Jds">首次发布（Haversine）</LinkPreview>
+    - <LinkPreview url="https://tempero-tech.vercel.app/">应用</LinkPreview>
+    - <LinkPreview url="https://github.com/Tonybsilva-dev/tempero-tech/tree/develop">仓库（develop）</LinkPreview>
+  </section>
+</article>
+
+

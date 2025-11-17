@@ -1,0 +1,105 @@
+---
+title: Novo Atacarejo
+description: Novo Atacarejo 帮助中心
+tags:
+  - Next.js
+  - Tailwind CSS
+  - TypeScript
+  - React
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+  <header>
+    <h1>Novo Atacarejo - 帮助中心</h1>
+    Novo Atacarejo 帮助中心是一个智能支持解决方案，旨在协助客户在 Pane de Ofertas 活动期间，通过交互式验证流程确保现金返还的正确使用。该应用程序使用 <LinkPreview url="https://react.dev/">React</LinkPreview>、<LinkPreview url="https://nextjs.org/">Next.js</LinkPreview>、<LinkPreview url="https://www.typescriptlang.org/">TypeScript</LinkPreview> 和 <LinkPreview url="https://tailwindcss.com/">Tailwind CSS</LinkPreview> 构建，专注于可访问性、响应式设计和基于组件的清洁现代架构。
+    <Callout className='flex flex-row gap-2' type="default" title="业务背景">
+      该项目源于 Novo Atacarejo 在 Pane de Ofertas 活动期间减少 SAC（客户服务）过载的需求，提供官方支持渠道，澄清疑问并引导客户通过结构化验证流程确保现金返还系统的正确使用。
+    </Callout>
+  </header>
+
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">
+      交互式演示
+    </div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[600px] rounded-lg overflow-hidden border shadow-sm">
+      <div className="absolute inset-0 w-full h-full">
+        <div className="w-[125%] h-[125%] origin-top-left scale-[0.8]">
+          <iframe
+            src="https://suporte.novoatacarejo.dilis.com.br/"
+            className="w-full h-full"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  <section>
+    ## 主要功能
+
+    - **智能支持向导：** 条件问题流程，验证现金返还所需的每个步骤。
+    - **完整分析系统：** 详细跟踪交互、点击和用户行为。
+    - **集成 NPS 调查：** 关于服务的 3 个具体问题的满意度评估。
+    - **交互式常见问题：** 手风琴式答案的常见问题部分。
+    - **响应式设计：** 针对桌面和移动设备优化的界面，具有直观的导航。
+    - **联系表单：** 与电子邮件系统集成，用于需要人工支持的情况。
+  </section>
+
+  <br />
+  <br />
+
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[vscode-icons--file-type-nextjs]" />
+    <StackItem className="icon-[simple-icons--tailwindcss]" />
+    <StackItem className="icon-[simple-icons--prisma]" />
+    <StackItem className="icon-[simple-icons--vitest]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## 架构与技术栈
+
+    | 类别            | 技术                | 用途                                                        |
+    | :------------------- | :----------------------- | :--------------------------------------------------------------- |
+    | **主框架** | React / Next.js           | 基于组件和 App Router 的声明式界面。        |
+    | **语言**           | TypeScript                | 静态类型以确保安全性和可维护性。               |
+    | **样式**         | Tailwind CSS              | 实用优先的 CSS，用于快速和一致的开发。      |
+    | **数据库**      | Prisma + PostgreSQL       | 用于数据管理和迁移的 ORM。                      |
+    | **验证**           | Zod                       | 运行时模式和类型验证。                          |
+    | **测试**              | Vitest + Testing Library  | 单元测试和集成测试。                                 |
+    | **分析**           | 自定义 API           | 用于指标跟踪的专有系统。                      |
+    | **托管**          | Vercel                    | 用于性能的 CI/CD 和全球 CDN。                              |
+  </section>
+
+  <section className="mt-8">
+    ## 智能支持流程
+
+    系统实现了一个 9 步向导，验证现金返还所需的每个条件：
+
+    1. **Novo Clube 注册** - 验证用户是否在购买前注册
+    2. **参与产品** - 确认购买的产品是否在现金返还列表中
+    3. **购买地点** - 验证是否在 Novo Atacarejo 实体店
+    4. **收银台识别** - 确认是否在 POS 提供了 CPF
+    5. **释放截止日期** - 验证购买后是否已过 48 小时
+    6. **应用咨询** - 指导如何检查余额
+    7. **余额有效性** - 确认现金返还是否仍然有效
+    8. **收银台使用** - 验证用户是否告知了现金返还的使用
+    9. **虚拟卡** - 确认用户是否手中有应用
+
+    每个步骤都提供具体指导，并在必要时提供有针对性的行动号召。
+  </section>
+</article>
+

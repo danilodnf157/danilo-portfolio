@@ -1,0 +1,104 @@
+---
+title: "Syntax Error Code Generator"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+
+  <header>
+    <h1>Syntax Error Code Generator — VS Code Extension</h1>
+
+    A **Visual Studio Code** extension to standardize and speed up **error code** generation in applications that value observability, traceability, and scalable maintenance. It creates unique, consistent codes aligned with project conventions and integrates naturally with tools like **Sentry**, **Datadog**, **New Relic**, **Elastic APM**, and **Grafana Loki**.
+
+    <div className="mt-4 flex items-center justify-center gap-4">
+      <img src="/images/syntax-error-code-generator/icon.png" alt="Syntax Error Code Generator - Icon" width="120" />
+    </div>
+
+    <Callout className="flex flex-row gap-2 mt-4" type="default" title="Official release">
+      Published as my first VS Code extension, focused on error code standardization and DX/observability improvements. Marketplace: <LinkPreview url="https://lnkd.in/dCdeuGbb">https://lnkd.in/dCdeuGbb</LinkPreview>
+    </Callout>
+  </header>
+
+  <section>
+    ## From operational pain to standardization
+
+    ### Act 1 — Logs without identity
+    In multi‑service environments, errors without clear codes hinder grouping, alerting, and diagnosis — especially as teams grow.
+
+    ### Act 2 — The insight
+    Define a **simple, stable convention** (domain prefixes + suffix), generate codes directly in the editor workflow, and use them consistently in every `AppError`.
+
+    ### Act 3 — The proposal
+    An extension that:
+    - Generates **unique codes** following project standards (e.g., `AUTH_001`, `PAY_402`).  
+    - Provides **custom prefixes**, separator, and suffix length.  
+    - Supports **contextual analysis** to suggest acronyms (USR, DB, VAL, NET…).  
+    - Prevents duplication and speeds up **production debugging**.
+
+    ### Act 4 — Expected impact
+    - Better **grouping** and **alerts** in observability tools.  
+    - Reduced **diagnosis time** through traceable codes.  
+    - Superior **DX** via keyboard shortcuts and editor integration.
+
+    ### Act 5 — Next steps
+    Language‑specific formatters, monorepo presets, and `AppError` generator integrations.
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## Highlights
+
+    * **Automatic generation** of unique, consistent codes.  
+    * **Contextual acronyms** (USR, AUTH, DB, VAL, NET, FILE, CFG, ERR...).  
+    * **Flexible settings**: default acronym, separator, suffix length.  
+    * **Keyboard shortcut**: Cmd/Ctrl+Shift+E.  
+    * **Natural integration** with observability workflows and structured logging.
+  </section>
+
+  <br />
+  <br />
+
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[simple-icons--visualstudiocode]" />
+    <StackItem className="icon-[simple-icons--nodedotjs]" />
+    <StackItem className="icon-[simple-icons--esbuild]" />
+    <StackItem className="icon-[simple-icons--jest]" />
+    <StackItem className="icon-[simple-icons--github]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## Architecture & Tech Stack
+
+| Category | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Extension** | VS Code API | Editor integration and commands. |
+| **Language** | TypeScript | Strong typing and better DX. |
+| **Bundling** | esbuild | Fast, optimized build. |
+| **Testing** | Jest | Unit tests for generator logic. |
+| **Distribution** | VS Code Marketplace | Publishing and updates. |
+
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## References
+
+    - <LinkPreview url="https://lnkd.in/dCdeuGbb">VS Code Marketplace</LinkPreview>
+    - <LinkPreview url="https://github.com/Tonybsilva-dev/syntax-error-code-generator">Repository</LinkPreview>
+    - <LinkPreview url="https://raw.githubusercontent.com/Tonybsilva-dev/syntax-error-code-generator/refs/heads/main/README.md">README (features)</LinkPreview>
+  </section>
+</article>
+
+

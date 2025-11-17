@@ -1,0 +1,131 @@
+---
+title: "Pokedex"
+---
+
+import { Callout } from 'nextra/components'
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
+
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+{/* A tag <article> agrupa todo o conteúdo do projeto como um item independente e completo. */}
+<article className="prose dark:prose-invert max-w-none">
+
+  {/* O <header> contém a introdução do seu projeto. */}
+  <header>
+  <h1>Pokédex</h1>
+
+    Este projeto é uma Pokedex completa e interativa, desenvolvida para oferecer uma experiência de usuário rápida, intuitiva e visualmente agradável. Utilizando um stack tecnológico moderno com **<LinkPreview url="https://react.dev/">React</LinkPreview>, <LinkPreview url="https://nextjs.org/">Next.Js</LinkPreview>, <LinkPreview url="https://www.typescriptlang.org/">TypeScript</LinkPreview> e <LinkPreview url="https://tailwindcss.com/">Tailwind CSS</LinkPreview>**, a aplicação consome a  <LinkPreview url="https://pokeapi.co/">PokeAPI</LinkPreview> para fornecer dados detalhados sobre o universo Pokémon.
+
+    O foco foi criar não apenas uma ferramenta funcional, mas também um showcase de boas práticas de desenvolvimento front-end, incluindo gerenciamento de estado eficiente com **<LinkPreview url="https://tanstack.com/query/latest">React Query</LinkPreview>**, design responsivo e uma arquitetura baseada em componentes.
+<Callout className='flex flex-row gap-2' type="info" title="Recursos" > 
+
+ Devido a algumas limitações da PokeApi, as traduções não estão disponíveis para todos os Pokémon em seus respectivos idiomas.
+ Como por exemplo (Português do Brasil), o idioma é selecionado automaticamente com base na região do navegador do usuário e na disponibilidade da tradução.
+
+</Callout>
+  
+  </header>
+ {/* Demo interativa em aspecto desktop (16:9) */}
+  <div className="mt-6">
+
+  
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">Demo interativa</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[720px] rounded-lg overflow-hidden border shadow-sm">
+      <iframe
+        src="https://pokedex-v2-antonio-s.vercel.app/"
+        className="absolute inset-0 w-full h-full"
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+      />
+    </div>
+  </div>
+<br />
+<br />
+  {/* Seção para a galeria de imagens. Use um grid responsivo. */}
+  <div className="left">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-1">Responsividade Mobile</div>
+    <div className="flex justify-between items-center mt-0">
+      <img src="/images/pokedex/pokedex-mobile.png" alt="Pokédex - Mobile" width="45%" />
+      <img src="/images/pokedex/pokedex-mobile-data.png" alt="Pokédex - Mobile (Detalhes)" width="45%" />
+    </div>
+    <br />
+    <div className="text-sm text-neutral-500 dark:text-neutral-400">demonstrativo da interface mobile (pokemon e dados).</div>
+  </div>
+
+ 
+
+
+  {/* A tag <section> agrupa as principais características do projeto. */}
+  <section>
+    ## Funcionalidades Principais
+
+    A aplicação foi desenvolvida com foco na experiência do usuário e na performance. Abaixo estão os destaques:
+
+    *   **Listagem com D-Pad:** A página inicial apresenta os Pokémon com um sistema de D-Pad para uma navegação fluida e contínua também acessível pelo teclado.
+    *   **Busca e Filtragem em Tempo Real:** Encontre Pokémon rapidamente através da busca por nome ou número e refine os resultados com o filtro por tipo.
+    *   **Página de Detalhes Imersiva:** Cada Pokémon possui uma página dedicada com informações completas, incluindo status base, habilidades e cadeia evolutiva.
+    *   **Background Dinâmico:** A cor de fundo da página de detalhes se adapta dinamicamente ao pokedex da primeira geração.
+    *   **Tema Claro e Escuro (Dark/Light Mode):** Alterne entre os temas para uma visualização mais confortável em diferentes ambientes.
+    *   **Design Totalmente Responsivo:** A interface se adapta perfeitamente a qualquer tamanho de tela, de desktops a dispositivos móveis.
+    *   **Design Inspirado em Pokémon:** A interface foi inspirada na pokedex da primeira geração, e no mobile foi inspirada no design do clássico gameboy.
+  </section>
+
+<br />
+<br />
+
+  <Marquee
+              pauseOnHover
+              autoFill
+              gradient
+              direction="right"
+              gradientColor="var(--background)"
+              speed={60}
+            >
+              <StackItem className="icon-[simple-icons--react]" /> 
+              <StackItem className="icon-[simple-icons--javascript]" />         
+              <StackItem className="icon-[simple-icons--typescript]" />    
+              <StackItem className="icon-[vscode-icons--file-type-nextjs]" />
+              <StackItem className="icon-[simple-icons--tailwindcss]" />   
+              <StackItem className="icon-[simple-icons--reactquery]" />    
+              <StackItem className="icon-[simple-icons--axios]" />         
+              <StackItem className="icon-[teenyicons--eslint-outline]" />  
+              <StackItem className="icon-[game-icons--gamepad-cross]" />        
+              <StackItem className="icon-[ri--vercel-line]" />        
+            </Marquee>
+
+<br />
+<br />
+
+  <section className="mt-8">
+    ## Arquitetura e Stack Tecnológico
+
+    O projeto foi construído sobre uma base de tecnologias modernas, escolhidas para garantir performance, escalabilidade e uma ótima experiência de desenvolvimento.
+
+
+| Categoria | Tecnologia | Propósito |
+| :--- | :--- | :--- |
+| **Framework Principal** | React | Construção da interface de usuário de forma declarativa e baseada em componentes. |
+| **Linguagem** | TypeScript | Adiciona tipagem estática ao JavaScript para maior robustez e manutenibilidade do código. |
+| **Build Tool** | Next.Js | Oferece um ambiente de desenvolvimento extremamente rápido com Hot Module Replacement (HMR). |
+| **Estilização** | Tailwind CSS | Framework CSS utility-first para a criação de designs customizados de forma rápida e eficiente. |
+| **Gerenciamento de Estado**| React Query | Gerenciamento de estado do servidor, caching, e paginação de dados da API (scroll infinito). |
+| **Cliente HTTP** | Axios | Realização das chamadas para a PokeAPI de forma simplificada. |
+| **Linting** | ESLint | Análise estática do código para encontrar e corrigir problemas. |
+| **Hospedagem** | Vercel | Plataforma de deploy para garantir a entrega contínua e a performance da aplicação. |
+
+    A arquitetura é baseada em **componentes**, onde cada parte da interface é um bloco isolado e reutilizável, facilitando a manutenção e o desenvolvimento de novas funcionalidades. O estado global da aplicação, especialmente os dados vindos da API, é gerenciado de forma eficiente pelo **React Query**, que simplifica o fetching, caching e a atualização de dados remotos.
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## Publicação no LinkedIn
+
+    <div className="relative w-full max-w-3xl mx-auto">
+      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7374284121268731904?collapsed=1" height="514" width="504" frameborder="0" allowfullscreen="" title="Publicação incorporada"></iframe>
+    </div>
+  </section>
+</article>

@@ -1,0 +1,104 @@
+---
+title: "Syntax Error Code Generator"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+
+  <header>
+    <h1>Syntax Error Code Generator — VS Code 扩展</h1>
+
+    面向 **Visual Studio Code** 的扩展，用于**标准化并加速错误码生成**，服务于重视可观测性、可追踪性与可维护性的系统。按照项目约定创建唯一且一致的错误码，并可与 **Sentry**、**Datadog**、**New Relic**、**Elastic APM**、**Grafana Loki** 等工具自然集成。
+
+    <div className="mt-4 flex items-center justify-center gap-4">
+      <img src="/images/syntax-error-code-generator/icon.png" alt="Syntax Error Code Generator - 图标" width="120" />
+    </div>
+
+    <Callout className="flex flex-row gap-2 mt-4" type="default" title="正式发布">
+      我的首个 VS Code 扩展，聚焦错误码标准化与 DX/可观测性提升。Marketplace：<LinkPreview url="https://lnkd.in/dCdeuGbb">https://lnkd.in/dCdeuGbb</LinkPreview>
+    </Callout>
+  </header>
+
+  <section>
+    ## 从运维痛点到标准化
+
+    ### 第一幕 — 无标识的日志
+    在多服务环境下，缺少清晰错误码会阻碍日志分组、告警与诊断，团队规模越大问题越明显。
+
+    ### 第二幕 — 灵感
+    约定**简单稳定**的编码规范（领域前缀 + 后缀），在编辑器工作流里直接生成，并在每个 `AppError` 中一致使用。
+
+    ### 第三幕 — 方案
+    该扩展：
+    - 生成**唯一错误码**（如 `AUTH_001`, `PAY_402`）。  
+    - 提供**自定义前缀**、分隔符与后缀长度。  
+    - 支持**上下文分析**建议缩写（USR、DB、VAL、NET…）。  
+    - 避免重复并加速**生产环境调试**。
+
+    ### 第四幕 — 预期影响
+    - 更好的**日志分组**与**告警**。  
+    - 通过可追踪的错误码降低**诊断时间**。  
+    - 借助快捷键提升 **DX**。
+
+    ### 第五幕 — 下一步
+    按语言的格式化器、monorepo 预设以及与 `AppError` 生成器的集成。
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## 亮点
+
+    * **自动生成** 唯一且一致的错误码。  
+    * **上下文缩写**（USR、AUTH、DB、VAL、NET、FILE、CFG、ERR...）。  
+    * **灵活配置**：默认缩写、分隔符、后缀长度。  
+    * **快捷键**：Cmd/Ctrl+Shift+E。  
+    * 与可观测性与结构化日志**自然融合**。
+  </section>
+
+  <br />
+  <br />
+
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[simple-icons--visualstudiocode]" />
+    <StackItem className="icon-[simple-icons--nodedotjs]" />
+    <StackItem className="icon-[simple-icons--esbuild]" />
+    <StackItem className="icon-[simple-icons--jest]" />
+    <StackItem className="icon-[simple-icons--github]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## 架构与技术栈
+
+| 类别 | 技术 | 作用 |
+| :--- | :--- | :--- |
+| **扩展** | VS Code API | 与编辑器集成与命令。 |
+| **语言** | TypeScript | 强类型与更佳 DX。 |
+| **打包** | esbuild | 快速构建与优化。 |
+| **测试** | Jest | 生成逻辑的单元测试。 |
+| **分发** | VS Code Marketplace | 扩展发布与更新。 |
+
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## 参考
+
+    - <LinkPreview url="https://lnkd.in/dCdeuGbb">VS Code Marketplace</LinkPreview>
+    - <LinkPreview url="https://github.com/Tonybsilva-dev/syntax-error-code-generator">仓库</LinkPreview>
+    - <LinkPreview url="https://raw.githubusercontent.com/Tonybsilva-dev/syntax-error-code-generator/refs/heads/main/README.md">README（功能）</LinkPreview>
+  </section>
+</article>
+
+

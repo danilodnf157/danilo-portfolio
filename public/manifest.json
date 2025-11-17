@@ -1,0 +1,22 @@
+{
+  "name": "Antonio Silva - Portfolio",
+  "short_name": "Antonio Silva",
+  "description": "Full Stack Software Engineer - Portfolio com projetos, experiência profissional e stack tecnológico",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "developer", "technology"],
+  "lang": "pt-BR",
+  "dir": "ltr"
+}
+

@@ -1,0 +1,126 @@
+---
+title: "Feedback Widget"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+{/* The <article> tag groups all project content as an independent, complete item. */}
+<article className="prose dark:prose-invert max-w-none">
+
+  <header>
+    <h1>Feedback Widget</h1>
+  </header>
+
+  {/* Narrative (proposal, no real deployment yet) */}
+  <section>
+    ## From corporate pain to a proposed solution
+
+    ### Act 1 — The dangerous silence
+    In corporate routines, teams often spend long hours investigating bugs with too little information. Tickets arrive late and without visual context. The real pain isn’t the bug — it’s the silence.
+
+    <Callout type="warning" title="Observed risk (personal experience)">
+      Without contextual feedback, fixes become bets — costing time, focus, and user trust.
+    </Callout>
+
+    ### Act 2 — The insight
+    What if users could tell the story at the exact moment of pain with an **automatic screenshot**? Turn frustration into direction, reducing noise during triage.
+
+    ### Act 3 — The proposal
+    An embedded, non‑intrusive widget with three pillars:
+    - **Immediate context:** screenshot plus lightweight metadata.
+    - **Near‑zero friction:** 3 feedback types (Problem, Idea, Other) submitted in seconds.
+    - **Closed loop:** email notification and backend record for later analysis.
+
+    ### Act 4 — Expected impact (hypothesis)
+    No real clients yet; the goal is to validate these gains in a pilot:
+    - **Time to understand a bug:** ↓ 60–80% with contextual screenshots.
+    - **Triage cost per ticket:** ↓ 30–50%.
+    - **Lead time (discovery → fix):** ↑ 2–3x.
+    - **Actionable ideas/month:** consistent growth via simple categorization.
+
+    <Callout type="info" title="Status">
+      Proposal ready for a controlled PoC with clear measurement metrics.
+    </Callout>
+
+    ### Act 5 — Next steps
+    - Routing: problems → engineering board; ideas → discovery backlog.
+    - Thematic grouping: keywords and originating screen.
+    - Mobile SDK (Expo) to broaden reach.
+  </section>
+
+  {/* Desktop-like interactive demo (16:9 aspect ratio) */}
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">Interactive demo</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[600px] rounded-lg overflow-hidden border shadow-sm">
+      <iframe
+        src="https://feedback-widget-antonio-s.vercel.app/"
+        className="absolute inset-0 w-full h-full"
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+      />
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  {/* Tech marquee */}
+  <Marquee
+    pauseOnHover
+    autoFill
+    gradient
+    direction="right"
+    gradientColor="var(--background)"
+    speed={60}
+  >
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[simple-icons--vite]" />
+    <StackItem className="icon-[simple-icons--tailwindcss]" />
+    <StackItem className="icon-[simple-icons--nodedotjs]" />
+    <StackItem className="icon-[simple-icons--prisma]" />
+    <StackItem className="icon-[simple-icons--jest]" />
+    <StackItem className="icon-[simple-icons--nodemailer]" />
+    <StackItem className="icon-[simple-icons--expo]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  {/* Key Features */}
+  <section>
+    ## Key Features
+
+    * **Feedback types:** Problem, Idea, and Other, with customizable categories.
+    * **Automatic screenshot:** Captures the current screen to help triage issues faster.
+    * **Responsive and accessible UI:** Keyboard navigation, ARIA labels, and mobile-ready UI.
+    * **Email notifications:** Sends feedback details via <LinkPreview url="https://nodemailer.com/">Nodemailer</LinkPreview>.
+    * **Backend API:** Stores feedback via <LinkPreview url="https://www.prisma.io/">Prisma</LinkPreview> using SQLite by default.
+    * **Testing:** Unit tests with <LinkPreview url="https://jestjs.io/">Jest</LinkPreview>.
+  </section>
+
+  <br />
+  <br />
+
+  {/* Architecture & Stack */}
+  <section className="mt-8">
+    ## Architecture & Tech Stack
+
+    | Category | Technology | Purpose |
+    | :--- | :--- | :--- |
+    | **Web (Frontend)** | React + Vite + Tailwind CSS | Widget UI and styles. |
+    | **Mobile** | Expo / React Native | Optional mobile client. |
+    | **Server (Backend)** | Node.js (Express) | REST API to receive feedback. |
+    | **ORM & DB** | Prisma + SQLite | Data modeling and persistence. |
+    | **Email** | Nodemailer | Sends feedback summaries. |
+    | **Testing** | Jest | Unit tests for use cases. |
+    | **Language** | TypeScript | Type safety across the stack. |
+    | **Hosting** | Vercel | CI/CD and global CDN. |
+  </section>
+
+</article>
+
+

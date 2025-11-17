@@ -1,0 +1,142 @@
+---
+title: "Draupnir — 设计系统"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+
+  <header>
+    <h1>Draupnir — 设计系统</h1>
+
+    基于 **React**、**TypeScript** 与 **Tailwind CSS** 的现代、可访问与高性能设计系统。灵感源自北欧神话中可自我倍增的指环，象征组件的**复用性**与**可扩展性**。提供视觉一致性、**设计令牌（Tokens）**、**主题**、可访问性，以及通过 **Storybook** 提供的一流开发体验。
+
+    <div className="mt-4 flex items-center justify-center gap-4">
+      <img src="/images/draupnir/logo.png" alt="Draupnir - 标志" width="160" />
+    </div>
+
+    <Callout className="flex flex-row gap-2 mt-4" type="default" title="动机与起因">
+      该项目源于我的好奇心与真实需求：我曾在一个没有 UX/UI 团队的环境中负责前端开发，需要标准化并加速界面交付。因此打造此系统，以验证具有品牌识别、完备文档、集中化决策、并可面向多平台（Web 与移动端）分发的可行性。
+    </Callout>
+  </header>
+
+  {/* 叙述（贴近产品的方案） */}
+  <section>
+    ## 从不一致到组件平台
+
+    ### 第一幕 — 破碎的拼图
+    多团队协作、且缺少 UX/UI 团队时，UI 更易漂移：配色不一、间距随意、行为异常、可访问性被忽视。作为前端负责人，我发现逐案修补无法规模化。
+
+    ### 第二幕 — 灵感
+    将 UI 决策沉淀为贴合品牌的**设计令牌**；采用 **Atomic Design** 组织生态；以 **Storybook** 文档化；自第一天落实**可访问性**、**主题**与**集中治理**，以提升团队协作效率。
+
+    ### 第三幕 — 方案
+    设计系统包含：
+    - 版本化 **Tokens**（颜色、排版、间距、阴影），即可用于品牌化落地。  
+    - **Atomic Design**（原子 → 分子 → 有机体）与一致 API。  
+    - **可访问性**（ARIA、键盘导航）。  
+    - **主题**（明/暗）与可扩展能力。  
+    - **Storybook** 交互式文档、使用指南与最佳实践。  
+    - **多平台分发**（Web 与移动端）的版本化包。  
+    - **TypeScript** 强类型以获得更佳 DX 与安全性。
+
+    ### 第四幕 — 预期影响
+    - 显著减少视觉不一致。  
+    - 通过复用加速页面交付。  
+    - 更少的可访问性缺陷。  
+    - 团队交付更可预测、更一致。  
+    - 借助文档与集中规范，加速新人上手。
+
+    ### 第五幕 — 下一步
+    扩展组件目录（表格、数据可视化）、发布包与跨应用迁移指南，并提供移动端预设。
+  </section>
+
+  <br />
+  <br />
+
+  {/* 交互演示 */}
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">交互演示</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[600px] rounded-lg overflow-hidden border shadow-sm">
+      <iframe
+        src="https://draupnir.vercel.app/"
+        className="absolute inset-0 w-full h-full"
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+      />
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  <section>
+    ## 亮点
+
+    * **设计令牌：** 集中管理配色、排版、间距、阴影。  
+    * **Atomic Design：** 原子 → 分子 → 有机体的组件分层。  
+    * **可访问性：** 支持 ARIA 与键盘导航。  
+    * **主题：** 原生明/暗模式与扩展能力。  
+    * **响应式：** 组件适配多端屏幕。  
+    * **性能：** Tree‑shaking 与精简 API。  
+    * **TypeScript：** 端到端强类型。  
+    * **Storybook：** 交互式文档与示例。
+  </section>
+
+  <br />
+  <br />
+
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[simple-icons--tailwindcss]" />
+    <StackItem className="icon-[simple-icons--storybook]" />
+    <StackItem className="icon-[simple-icons--jest]" />
+    <StackItem className="icon-[simple-icons--vercel]" />
+    <StackItem className="icon-[simple-icons--npm]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## 架构与技术栈
+
+| 类别 | 技术 | 作用 |
+| :--- | :--- | :--- |
+| **框架** | React | 组件模型与组合式开发。 |
+| **语言** | TypeScript | 静态类型与更佳 DX。 |
+| **样式** | Tailwind CSS | 实用优先的一致性与效率。 |
+| **文档** | Storybook | 交互式文档与演示。 |
+| **测试** | Jest | 组件与 hooks 单元测试。 |
+| **构建/分发** | Vercel / npm | 部署与包发布。 |
+
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## LinkedIn 发布
+
+    <div className="relative w-full max-w-3xl mx-auto">
+      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7163016278025068545?collapsed=1" height="532" width="504" frameborder="0" allowfullscreen="" title="嵌入的 LinkedIn 发布"></iframe>
+    </div>
+  </section>
+
+  <br />
+  <br />
+
+  <section>
+    ## 参考
+
+    - <LinkPreview url="https://draupnir.vercel.app/">应用</LinkPreview>
+    - <LinkPreview url="https://github.com/Tonybsilva-dev/Draupnir">仓库</LinkPreview>
+    - <LinkPreview url="https://www.linkedin.com/posts/tony-silva_designsystem-frontend-react-activity-7163016278742351872-V2S0?utm_source=share&utm_medium=member_desktop&rcm=ACoAACGgHxABQSbP79LZTAHsoml8u578caa8Jds">LinkedIn 发布</LinkPreview>
+  </section>
+</article>
+
+

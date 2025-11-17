@@ -1,0 +1,102 @@
+---
+title: "Tic Tac Toe - AI"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+  <header>
+    <h1>Tic Tac Toe - AI</h1>
+  </header>
+
+  {/* 叙事（个人项目） */}
+  <section>
+    ## 从网页游戏好奇到算法练习
+
+    ### 第一幕 —— 火花
+    我一直对原生网页游戏充满兴趣。为练习**编程逻辑**与**算法**，我选择将经典“井字棋”变成实验室。
+
+    <Callout type="warning" title="个人挑战">
+      打造一个简单但“会下棋”的 AI，反应迅速、效果可信，而不依赖外部引擎。
+    </Callout>
+
+    ### 第二幕 —— 想法
+    使用清晰的启发式策略（阻止对手胜利、寻找取胜机会、优先中心/角落），并保持简洁、响应式的界面。
+
+    ### 第三幕 —— 实验
+    采用 **React** + **TypeScript** 与 **Tailwind CSS** 实现，UI 使用 **Radix UI** 与 **Lucide** 图标。**状态管理** 使用 **Zustand**，实现了走棋历史以及可切换的 AI 模式。
+
+    ### 第四幕 —— 收获
+    - 精简且可预期的状态建模
+    - 将游戏规则与渲染解耦
+    - 简单启发式也能带来有趣的休闲对弈体验
+
+    
+  </section>
+
+  {/* 交互演示 */}
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">交互演示</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[600px] rounded-lg overflow-hidden border shadow-sm">
+      <div className="absolute inset-0 w-full h-full">
+        <div className="w-[140%] h-[140%] origin-top-left scale-[0.7]">
+          <iframe
+            src="https://tic-tac-toe-ai-iota.vercel.app/"
+            className="w-full h-full"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  {/* 技术栈走马灯 */}
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[simple-icons--tailwindcss]" />
+    <StackItem className="icon-[simple-icons--radixui]" />
+    <StackItem className="icon-[simple-icons--lucide]" />
+    <StackItem className="icon-[simple-icons--zustand]" />
+    <StackItem className="icon-[simple-icons--vercel]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section>
+    ## 主要特性
+
+    * **对弈 AI**（启发式策略，响应快速）
+    * **对局历史** 与 一键重开
+    * **响应式、可访问的 UI**
+    * **细腻动效** 与 简洁视觉
+  </section>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## 架构与技术栈
+
+    | 分类 | 技术 | 作用 |
+    | :--- | :--- | :--- |
+    | **框架** | React | 声明式组件化界面 |
+    | **语言** | TypeScript | 静态类型 |
+    | **样式** | Tailwind CSS | 实用优先样式 |
+    | **UI** | Radix UI | 可访问性基础组件 |
+    | **图标** | Lucide Icons | 轻量图标 |
+    | **状态管理** | Zustand | 简洁可预期的 store |
+    | **托管** | Vercel | 部署与 CDN |
+  </section>
+
+</article>
+
+

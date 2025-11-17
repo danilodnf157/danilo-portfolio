@@ -1,0 +1,102 @@
+---
+title: "Tic Tac Toe - AI"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+  <header>
+    <h1>Tic Tac Toe - AI</h1>
+  </header>
+
+  {/* Narrativa (proposta pessoal) */}
+  <section>
+    ## Da curiosidade em jogos web à prática de algoritmos
+
+    ### Ato 1 — A faísca
+    Sempre gostei de jogos web nativos. Para exercitar **lógica de programação** e **algoritmos**, decidi transformar um clássico em laboratório: o jogo da velha.
+
+    <Callout type="warning" title="Desafio pessoal">
+      Construir uma IA simples, porém convincente, que jogasse bem e respondesse rápido — sem depender de engines externas.
+    </Callout>
+
+    ### Ato 2 — A ideia
+    Usar heurísticas claras (bloquear vitória, buscar vitória, priorizar centro/cantos) e garantir uma experiência fluida com uma UI minimalista e responsiva.
+
+    ### Ato 3 — O experimento
+    Implementação em **React** + **TypeScript** com **Tailwind CSS**, UI com **Radix UI** e ícones **Lucide**. O **gerenciamento de estado** foi feito com **Zustand**, estruturando histórico de jogadas e um modo alternável contra IA.
+
+    ### Ato 4 — O que aprendi
+    - Modelagem de estado enxuta e previsível
+    - Separação de regras (lógica do jogo) da renderização
+    - Heurísticas simples podem entregar uma IA divertida para jogos casuais
+
+    
+  </section>
+
+  {/* Demo interativa */}
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">Demo interativa</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[600px] rounded-lg overflow-hidden border shadow-sm">
+      <div className="absolute inset-0 w-full h-full">
+        <div className="w-[140%] h-[140%] origin-top-left scale-[0.7]">
+          <iframe
+            src="https://tic-tac-toe-ai-iota.vercel.app/"
+            className="w-full h-full"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  {/* Marquee de tecnologias */}
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[simple-icons--tailwindcss]" />
+    <StackItem className="icon-[simple-icons--radixui]" />
+    <StackItem className="icon-[simple-icons--lucide]" />
+    <StackItem className="icon-[simple-icons--zustand]" />
+    <StackItem className="icon-[simple-icons--vercel]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section>
+    ## Funcionalidades Principais
+
+    * **Jogar contra IA** com heurísticas simples e respostas rápidas
+    * **Histórico de partidas** com reinício de jogo
+    * **UI responsiva** e acessível
+    * **Animações sutis** e visual limpo
+  </section>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## Arquitetura e Stack Tecnológico
+
+    | Categoria | Tecnologia | Propósito |
+    | :--- | :--- | :--- |
+    | **Framework** | React | Interface declarativa baseada em componentes |
+    | **Linguagem** | TypeScript | Tipagem estática |
+    | **Estilização** | Tailwind CSS | Estilos utilitários |
+    | **UI** | Radix UI | Componentes base acessíveis |
+    | **Ícones** | Lucide Icons | Ícones otimizados |
+    | **Gerenciamento de estado** | Zustand | Store simples e previsível |
+    | **Hospedagem** | Vercel | Deploy e CDN |
+  </section>
+
+</article>
+
+

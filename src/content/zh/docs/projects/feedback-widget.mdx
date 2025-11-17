@@ -1,0 +1,113 @@
+---
+title: "Feedback Widget"
+---
+
+import { Callout } from 'nextra/components'
+import Marquee from 'react-fast-marquee'
+import { StackItem } from '@/components/HomepageHero'
+import { LinkPreview } from '@/components/ui/link-preview'
+
+<article className="prose dark:prose-invert max-w-none">
+  <header>
+    <h1>反馈小组件（Feedback Widget）</h1>
+  </header>
+
+  {/* 叙事（提案，尚未真实部署） */}
+  <section>
+    ## 从企业痛点到解决方案提案
+
+    ### 第一幕 —— 危险的沉默
+    在企业环境中，团队经常花费大量时间在缺乏信息的情况下调查问题。工单来得晚且缺少可视化上下文。真正的痛点不是 bug 本身，而是沉默。
+
+    <Callout type="warning" title="观察到的风险（个人经验）">
+      缺少上下文的反馈让修复变成“押注”，消耗时间、精力与用户信任。
+    </Callout>
+
+    ### 第二幕 —— 灵感
+    如果用户能在痛点发生的那一刻，通过**自动截图**讲述故事，会怎样？把挫败感转化为方向，降低排查噪音。
+
+    ### 第三幕 —— 提案
+    一个内嵌、非侵入式的小组件，基于三大支柱：
+    - **即时上下文：** 截图与少量元数据。
+    - **极低摩擦：** 三种反馈类型（问题、想法、其他），数秒内提交。
+    - **闭环：** 邮件通知与后端记录，便于后续分析。
+
+    ### 第四幕 —— 预期影响（假设）
+    尚无真实客户；目标是在试点中验证：
+    - **理解问题所需时间：** 通过上下文截图降低 60–80%。
+    - **每个工单的分流成本：** 降低 30–50%。
+    - **交付周期（发现 → 修复）：** 提升 2–3 倍。
+    - **每月可执行想法数：** 通过简单分类稳定增长。
+
+    <Callout type="info" title="状态">
+      提案已就绪，可进行受控 PoC，并以明确指标进行度量。
+    </Callout>
+
+    ### 第五幕 —— 下一步
+    - 路由：问题 → 工程看板；想法 → 需求探索待办。
+    - 主题分组：关键词与来源界面。
+    - 移动端 SDK（Expo）以扩展覆盖面。
+  </section>
+
+  <div className="mt-6">
+    <div className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">交互演示</div>
+    <div className="relative w-full max-w-6xl mx-auto aspect-[16/10] md:aspect-[16/9] min-h-[600px] rounded-lg overflow-hidden border shadow-sm">
+      <iframe
+        src="https://feedback-widget-antonio-s.vercel.app/"
+        className="absolute inset-0 w-full h-full"
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+      />
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  <Marquee pauseOnHover autoFill gradient direction="right" gradientColor="var(--background)" speed={60}>
+    <StackItem className="icon-[simple-icons--react]" />
+    <StackItem className="icon-[simple-icons--typescript]" />
+    <StackItem className="icon-[simple-icons--vite]" />
+    <StackItem className="icon-[simple-icons--tailwindcss]" />
+    <StackItem className="icon-[simple-icons--nodedotjs]" />
+    <StackItem className="icon-[simple-icons--prisma]" />
+    <StackItem className="icon-[simple-icons--jest]" />
+    <StackItem className="icon-[simple-icons--nodemailer]" />
+    <StackItem className="icon-[simple-icons--expo]" />
+  </Marquee>
+
+  <br />
+  <br />
+
+  <section>
+    ## 主要特性
+
+    * **反馈类型：** 问题、想法与其他，可自定义分类。
+    * **自动截图：** 捕获当前屏幕，便于快速定位问题。
+    * **无障碍与响应式：** 支持键盘导航与移动端。
+    * **邮件通知：** 通过 <LinkPreview url="https://nodemailer.com/">Nodemailer</LinkPreview> 发送反馈详情。
+    * **后端 API：** 使用 <LinkPreview url="https://www.prisma.io/">Prisma</LinkPreview> 存储（默认 SQLite）。
+    * **测试：** 使用 <LinkPreview url="https://jestjs.io/">Jest</LinkPreview> 进行单元测试。
+  </section>
+
+  <br />
+  <br />
+
+  <section className="mt-8">
+    ## 架构与技术栈
+
+    | 分类 | 技术 | 作用 |
+    | :--- | :--- | :--- |
+    | **前端** | React + Vite + Tailwind CSS | 小组件 UI 与样式 |
+    | **移动端** | Expo / React Native | 可选移动端客户端 |
+    | **后端** | Node.js (Express) | 接收并存储反馈的 REST API |
+    | **ORM 与数据库** | Prisma + SQLite | 数据建模与持久化 |
+    | **邮件** | Nodemailer | 发送反馈邮件 |
+    | **测试** | Jest | 用例的单元测试 |
+    | **语言** | TypeScript | 全栈类型安全 |
+    | **托管** | Vercel | CI/CD 与全球 CDN |
+  </section>
+
+</article>
+
+

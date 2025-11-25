@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pt_BR',
     url: 'https://antonio-s.vercel.app',
-    siteName: 'Antonio Silva - Portfolio',
+    siteName: 'Danilo Nascimento - Portfolio',
     title: 'Antonio Silva - Full Stack Software Engineer',
     description: 'Full Stack Software Engineer especializado em React, Next.js, TypeScript e Node.js.',
     images: [

@@ -1,5 +1,5 @@
 export default {
-  systemTitle: 'Antonio Silva',
+  systemTitle: 'Danilo Nascimento',
   banner: {
     title: '👋 Olá! Eu sou Antonio Silva, Engenheiro de Software Full Stack',
     more: '(Sempre evoluindo e aprendendo)',
@@ -130,17 +130,17 @@ export default {
       phone: 'Telefone',
     },
     profileImage: '/img/photo.png',
-    name: 'Antonio Silva',
-    currentRole: 'Full Stack Software Engineer',
+    name: 'Danilo Nascimento',
+    currentRole: 'Estudante de Computação • Produtor de Eventos • Modelo',
     currentCompany: 'Dilis Studio',
     contact: {
       website: 'https://antonio-s.vercel.app',
-      email: 'contato@antoniobsilva.com.br',
-      phone: '+5583987308551',
+      email: 'danilo.nf.contato@gmail.com',
+      phone: '+5583996814256',
     },
     social: {
-      linkedin: 'https://www.linkedin.com/in/tony-silva/',
-      github: 'https://github.com/Tonybsilva-dev',
+      linkedin: 'https://www.linkedin.com/in/danilo-nascimento-a62b99388/',
+      github: 'https://github.com/danilodnf157',
       // twitter: undefined, // Adicione se tiver
     },
     workExperience: [

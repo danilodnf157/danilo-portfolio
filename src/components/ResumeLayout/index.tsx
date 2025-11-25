@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from 'next/image'
 import { useCallback, useMemo } from 'react'
@@ -127,7 +127,8 @@ export default function ResumeLayout() {
           <aside className="w-full lg:col-span-4 flex flex-col space-y-6">
             {/* Card 1: Foto de Perfil */}
             {resumeData.profileImage && (
-              <div className="w-full aspect-[4/5] sm:aspect-square relative rounded-2xl overflow-hidden">
+              <div className="w-full h-[420px] sm:h-[480px] relative rounded-2xl overflow-hidden">
+
                 <Image
                   src={resumeData.profileImage}
                   alt={resumeData.name}
